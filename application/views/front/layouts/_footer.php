@@ -1,4 +1,4 @@
-<div class="section section-download" id="#download-section" data-background-color="black">
+<div class="section section-download" id="download-section" data-background-color="black">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-3 col-md-4 text-center">
@@ -41,4 +41,3 @@
 		</div>
 	</div>
 </footer>
-</div>

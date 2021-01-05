@@ -2,6 +2,7 @@
  <nav class="navbar navbar-expand-lg bg-success fixed-top navbar-transparent " color-on-scroll="400">
  	<div class="container">
  		<div class="navbar-translate">
+ 			<img class="n-logo" src="<?= base_url() ?>/asset/landing_assets/img/smk-logo.png" width="40px">
  			<a class="navbar-brand" href="https://demos.creative-tim.com/now-ui-kit/index.html" rel="tooltip" title="Designed by Invision. Coded by Creative Tim" data-placement="bottom" target="_blank">
  				SMK Kesehatan Darussalam Bergas
  			</a>
@@ -44,9 +45,9 @@
  						</a>
  					</div>
  				</li>
- 				<li class="nav-item dropdown">
- 					<a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" data-toggle="dropdown">
- 						<p>Jurusan</p>
+ 				<li class="nav-item dropdown <?php if ($title == 'Asisten Keperawatan' || $title == 'Teknologi Laboratorium Medik') echo "active"; ?>"">
+ 					<a href=" #" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" data-toggle="dropdown">
+ 					<p>Jurusan</p>
  					</a>
  					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink1">
  						<a class="dropdown-item" href="<?= base_url('jurusan/ap') ?>"> Asisten Keperawatan
