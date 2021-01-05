@@ -1,5 +1,11 @@
  <!-- Navbar -->
- <nav class="navbar navbar-expand-lg bg-success fixed-top navbar-transparent " color-on-scroll="400">
+ <?php if ($title == 'Sejarah' || $title == 'Visi & Misi' || $title == 'Struktur Organisasi' || $title == 'Fasilitas' || $title == 'Asisten Keperawatan' || $title == 'Teknologi Laboratorium Medik' || $title == 'Tata Tertib' || $title == 'Agenda' || $title == 'Berita'){ ?>
+	 		<nav class='navbar navbar-expand-lg bg-success fixed-top'> <?php ; 
+ 		}else{ ?>
+			 <nav class='navbar navbar-expand-lg bg-success fixed-top navbar-transparent' color-on-scroll='400'> <?php ;
+		 }
+	?>
+ 
  	<div class="container">
  		<div class="navbar-translate">
  			<img class="n-logo" src="<?= base_url() ?>/asset/landing_assets/img/smk-logo.png" width="40px">
@@ -30,7 +36,7 @@
  						</a>
  					</div>
  				</li>
- 				<li class="nav-item dropdown <?php if ($title == 'Sejarah' || $title == 'Visi & Misi' || $title == 'Struktur' || $title == 'Fasilitas') echo "active"; ?>">
+ 				<li class="nav-item dropdown <?php if ($title == 'Sejarah' || $title == 'Visi & Misi' || $title == 'Struktur Organisasi' || $title == 'Fasilitas') echo "active"; ?>">
  					<a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" data-toggle="dropdown">
  						<p>Profil</p>
  					</a>
