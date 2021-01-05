@@ -1,14 +1,8 @@
-<!--================Home Banner Area =================-->
-<div class="jumbotron banner_area jumbotron-fluid" style="background-image: url(<?= base_url('img/banner_area/bg.jpg') ?>); ">
-	<div class="container">
-		<h1 class="display-4 my-auto text-light text-center">Sejarah</h1>
-	</div>
-</div>
-<!--================End Home Banner Area =================-->
 
 <!-- Content -->
 <div class="content mt-5 mb-5 pb-5 pt-5">
 	<div class="container">
+	<h1 class="display-4 my-auto text-center">Sejarah</h1>
 	<h4>A. Latar Belakang Berdirinya Smp Dan Smk Asy-Syuhada</h4>
 Pada saat kesadaran berpendidikan itu tumbuh dari mulai dikota-kota sampai di desa, terasa sekali lembaga dan sarana prasarana yang disediakan oleh pemerintah jauh dari cukup. Sehingga diperlukan kontribusi pihak swasta untuk berperan dalam mendirikan lembaga pendidikan dan memberikan pelayanan pendidikan bagi anak bangsa yang membutuhkan layanan pedidikan. Karena itu pada hari rabu, tanggal 2 mei 2007, yayasan Asy-Syuhada Roeslie merekomendasikan pendirian Smp Dan Smk Asy-Syuhada kepada dinas pendidikan kabupaten bogor.
 <br>
