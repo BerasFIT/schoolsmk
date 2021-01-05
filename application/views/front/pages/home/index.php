@@ -43,73 +43,75 @@
 			</div>
 		</div>
 	</div>
-	<!-- End of Sambutan -->
-	<!-- Jurusan -->
-	<div class="section section-tabs text-center">
-		<div class="container">
-			<h2 class="title">Jurusan</h2>
-			<div class="team">
-				<div class="row">
-					<div class="col-md-6">
-						<div class="team-player">
-							<h4 class="title">Asisten Keperawatan</h4>
-							<p class="category text-primary">Model</p>
-							<p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-								<a href="#">links</a> for people to be able to follow them outside the site.
-							</p>
-							<a href="#pablo" class="btn btn-success btn-icon btn-round"><i class="fab fa-twitter"></i></a>
-							<a href="#pablo" class="btn btn-success btn-icon btn-round"><i class="fab fa-instagram"></i></a>
-							<a href="#pablo" class="btn btn-success btn-icon btn-round"><i class="fab fa-facebook-square"></i></a>
-						</div>
+</div>
+
+<!-- End of Sambutan -->
+<!-- Jurusan -->
+<div class="section section-tabs text-center">
+	<div class="container">
+		<h2 class="title">Jurusan</h2>
+		<div class="team">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="team-player">
+						<h4 class="title">Asisten Keperawatan</h4>
+						<p class="category text-primary">Model</p>
+						<p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
+							<a href="#">links</a> for people to be able to follow them outside the site.
+						</p>
+						<a href="#pablo" class="btn btn-success btn-icon btn-round"><i class="fab fa-twitter"></i></a>
+						<a href="#pablo" class="btn btn-success btn-icon btn-round"><i class="fab fa-instagram"></i></a>
+						<a href="#pablo" class="btn btn-success btn-icon btn-round"><i class="fab fa-facebook-square"></i></a>
 					</div>
-					<div class="col-md-6">
-						<div class="team-player">
-							<h4 class="title">Teknologi Laboratorium Medik</h4>
-							<p class="category text-primary">Designer</p>
-							<p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-								<a href="#">links</a> for people to be able to follow them outside the site.
-							</p>
-							<a href="#pablo" class="btn btn-success btn-icon btn-round"><i class="fab fa-twitter"></i></a>
-							<a href="#pablo" class="btn btn-success btn-icon btn-round"><i class="fab fa-linkedin"></i></a>
-						</div>
+				</div>
+				<div class="col-md-6">
+					<div class="team-player">
+						<h4 class="title">Teknologi Laboratorium Medik</h4>
+						<p class="category text-primary">Designer</p>
+						<p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
+							<a href="#">links</a> for people to be able to follow them outside the site.
+						</p>
+						<a href="#pablo" class="btn btn-success btn-icon btn-round"><i class="fab fa-twitter"></i></a>
+						<a href="#pablo" class="btn btn-success btn-icon btn-round"><i class="fab fa-linkedin"></i></a>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<!-- End of Jurusan -->
+</div>
+<!-- End of Jurusan -->
 
 
-	<!-- Berita -->
-	<div class="last-news mt-5 mb-5">
-		<div class="container">
-			<div class="row d-flex justify-content-center">
-				<div class="col">
-					<h2 class="text-center">Berita Terbaru</h2>
-					<hr>
-				</div>
+<!-- Berita -->
+<div class="last-news mt-5 mb-5">
+	<div class="container">
+		<div class="row d-flex justify-content-center">
+			<div class="col">
+				<h2 class="text-center">Berita Terbaru</h2>
+				<hr>
 			</div>
-			<div class="row mt-4">
-				<?php foreach ($berita as $b) : ?>
-					<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-						<div class="card" style="width: 15rem; height: 26rem;">
-							<img style="height:150px" src="<?= base_url('img/berita/thumbs/' . $b->photo) ?>" class="card-img-top">
-							<div class="card-body">
-								<h6 class="card-title"><?= $b->title ?></h6>
-								<p class="card-text"><?= character_limiter($b->content, 50) ?></p>
-							</div>
-							<div class="card-footer text-center">
-								<a href="<?= base_url("blog/baca/$b->seo_title") ?>"><button class="btn btn-success">Baca Berita<i class="fa fa-angle-right ml-2"></i></button></a>
-							</div>
+		</div>
+		<div class="row mt-4">
+			<?php foreach ($berita as $b) : ?>
+				<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+					<div class="card" style="width: 15rem; height: 26rem;">
+						<img style="height:150px" src="<?= base_url('img/berita/thumbs/' . $b->photo) ?>" class="card-img-top">
+						<div class="card-body">
+							<h6 class="card-title"><?= $b->title ?></h6>
+							<p class="card-text"><?= character_limiter($b->content, 50) ?></p>
+						</div>
+						<div class="card-footer text-center">
+							<a href="<?= base_url("blog/baca/$b->seo_title") ?>"><button class="btn btn-success">Baca Berita<i class="fa fa-angle-right ml-2"></i></button></a>
 						</div>
 					</div>
-				<?php endforeach ?>
-			</div>
-			<div class="row mt-4">
-				<div class="col text-center">
-					<a href="<?= base_url('blog') ?>"><button class="btn btn-success">Lihat Selengkapnya<i class="fa fa-angle-right ml-2"></i></button></a>
 				</div>
+			<?php endforeach ?>
+		</div>
+		<div class="row mt-4">
+			<div class="col text-center">
+				<a href="<?= base_url('blog') ?>"><button class="btn btn-success">Lihat Selengkapnya<i class="fa fa-angle-right ml-2"></i></button></a>
 			</div>
 		</div>
 	</div>
-	<!-- End of Berita -->
+</div>
+<!-- End of Berita -->
