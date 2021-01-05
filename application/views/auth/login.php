@@ -1,55 +1,66 @@
 <?php $this->load->view('auth/templates/header') ?>
 
-  <main class="container">
-   <div class="row">
-      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-         <div class="card card-signin my-5">
-            <div class="card-body">
-            <h5 class="card-title text-center">LOGIN</h5>
-
-            <!-- Alert -->
-            <div class="row">
-               <div class="col">
-                  <?php if($this->session->flashdata('message')) : ?>
-                     <div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
-                     <?= $this->session->flashdata('message') ?>
-                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                        </button>   
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-success fixed-top navbar-transparent " color-on-scroll="400">
+   <div class="container">
+      <div class="navbar-translate">
+         <a class="navbar-brand" href="https://demos.creative-tim.com/now-ui-kit/index.html" rel="tooltip" data-placement="bottom" target="_blank">
+            SMK KESEHATAN DARUSSALAM BERGAS
+         </a>
+         <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-bar top-bar"></span>
+            <span class="navbar-toggler-bar middle-bar"></span>
+            <span class="navbar-toggler-bar bottom-bar"></span>
+         </button>
+      </div>
+      <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="<?= base_url() ?>/asset/landing_assets/img/blurred-image-1.jpg">
+         <ul class="navbar-nav">
+            <li class="nav-item">
+               <a class="nav-link" href="../index.html">Beranda</a>
+            </li>
+         </ul>
+      </div>
+   </div>
+</nav>
+<!-- End Navbar -->
+<div class="page-header clear-filter" filter-color="green">
+   <div class="page-header-image" style="background-image:url(<?= base_url() ?>/asset/landing_assets/img/login.jpg)"></div>
+   <div class="content">
+      <div class="container">
+         <div class="col-md-4 ml-auto mr-auto">
+            <div class="card card-login card-plain">
+               <?= form_open("auth/login", ["class" => "form-signin"]) ?>
+               <div class="card-header text-center">
+                  <div class="logo-container">
+                     <img src="<?= base_url() ?>/asset/landing_assets/img/smk-logo.png" alt="">
+                  </div>
+               </div>
+               <div class="card-body">
+                  <div class="input-group no-border input-lg">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text">
+                           <i class="now-ui-icons users_circle-08"></i>
+                        </span>
                      </div>
-                  <?php endif ?>
+                     <input type="text" name="identity" class="form-control" id="inputEmail" placeholder="Email.." required autofocus />
+                  </div>
+                  <div class="input-group no-border input-lg">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text">
+                           <i class="now-ui-icons text_caps-small"></i>
+                        </span>
+                     </div>
+                     <input type="password" name="password" id="inputPassword" placeholder="Password.." class="form-control" required autofocus />
+                  </div>
                </div>
-            </div>
+               <div class="card-footer text-center">
+                  <button class="btn btn-success btn-round btn-lg btn-block" type="submit">Masuk</button>
 
-            <?= form_open("auth/login", ["class" => "form-signin"]) ?>
-               <div class="form-label-group">
-                  <input type="text" name="identity" value="" class="form-control" id="inputEmail" placeholder="Email" required autofocus>  
-                  <label for="inputEmail">Email</label>
+                  <?= form_close() ?>
                </div>
-
-               <div class="form-label-group">
-                  <input type="password" name="password" id="inputPassword" value="" class="form-control" placeholder="Password" required>
-                  <label for="inputPassword">Password</label>
-               </div>
-
-               <div class="custom-control custom-checkbox mb-3">
-                  <input type="checkbox" name="remember" value="1" class="custom-control-input" id="remember">
-                  <label class="custom-control-label" for="remember">Remember Me</label>
-               </div>
-
-               <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign In</button>
-
-               <hr class="my-4">
-
-               <div class="text-center mt-1">
-                  <a href="<?= base_url('auth/forgot_password') ?>">Forgot Your Password ? </a> 
-               </div>
-               
-            <?= form_close() ?>
             </div>
          </div>
       </div>
    </div>
-  </main>
-  
-<?php $this->load->view('auth/templates/footer') ?>
+
+   <?php $this->load->view('auth/templates/footer') ?>
