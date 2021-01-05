@@ -10,7 +10,7 @@ class Jurusan extends CI_Controller {
 
 	public function ap()
 	{
-		$data['title']		= 'Administrasi Perkantoran';
+		$data['title']		= 'Asisten Keperawatan';
 		$data['page']		= 'jurusan/ap';
 
 		$this->load->view('front/layouts/main', $data);
@@ -18,7 +18,7 @@ class Jurusan extends CI_Controller {
 
 	public function ak()
 	{
-		$data['title']		= 'Akutansi';
+		$data['title']		= 'Teknologi Laboratorium Medik';
 		$data['page']		= 'jurusan/ak';
 
 		$this->load->view('front/layouts/main', $data);

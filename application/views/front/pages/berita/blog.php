@@ -1,7 +1,8 @@
 <!--================Home Banner Area =================-->
-<div class="jumbotron banner_area jumbotron-fluid" style="background-image: url(<?= base_url('img/banner_area/bg.jpg') ?>); ">
+<div class="jumbotron banner_area jumbotron-fluid bg-white">
 	<div class="container">
-		<h1 class="display-4 my-auto text-light text-center">Berita</h1>
+	<br>
+	<h1 class="display-4 my-auto text-center">Berita</h1>
 	</div>
 </div>
 <!--================End Home Banner Area =================-->
@@ -17,7 +18,7 @@
 						<div class="card-body">
 							<h5 class="card-title"><?= $n->title ?></h5>
 							<p class="card-text"><?= character_limiter($n->content,50) ?></p>
-							<a href="<?= base_url("blog/baca/$n->seo_title") ?>" class="btn btn-info btn-sm">Lanjut Membaca<i class="fa fa-angle-right ml-2"></i></a>
+							<a href="<?= base_url("blog/baca/$n->seo_title") ?>" class="btn btn-success btn-sm">Lanjut Membaca<i class="fa fa-angle-right ml-2"></i></a>
 						</div>
 					</div>
 				</div>
