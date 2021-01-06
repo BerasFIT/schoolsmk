@@ -18,7 +18,8 @@ class Auth extends CI_Controller
 
 		$this->form_validation->set_error_delimiters($this->config->item('error_start_delimiter', 'ion_auth'), $this->config->item('error_end_delimiter', 'ion_auth'));
 		$this->load->model('menu_model', 'menu', true);
-
+		$this->load->model('background_model', 'background');
+		
 		$this->lang->load('auth');
 	}
 
@@ -917,6 +918,8 @@ class Auth extends CI_Controller
 	 */
 	public function _render_page($view, $data = NULL, $returnhtml = FALSE)//I think this makes more sense
 	{
+
+		$data['jurusan']	= $this->background->getData();
 
 		$viewdata = (empty($data)) ? $this->data : $data;
 
