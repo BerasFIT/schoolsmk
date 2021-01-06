@@ -2,7 +2,7 @@
  <?php if ($title == 'Sejarah' || $title == 'Visi & Misi' || $title == 'Struktur Organisasi' || $title == 'Fasilitas' || $title == 'Asisten Keperawatan' || $title == 'Teknologi Laboratorium Medik' || $title == 'Tata Tertib' || $title == 'Agenda' || $title == 'Berita'){ ?>
 	 		<nav class='navbar navbar-expand-lg bg-success fixed-top'> <?php ; 
  		}else{ ?>
-			 <nav class='navbar navbar-expand-lg bg-success fixed-top navbar-transparent' color-on-scroll='400'> <?php ;
+			 <nav class='navbar navbar-expand-lg bg-success fixed-top navbar-transparent' color-on-scroll='350'> <?php ;
 		 }
 	?>
  
@@ -33,6 +33,8 @@
  						<a class="dropdown-item" href="./index.html">Siswa
  						</a>
  						<a class="dropdown-item" target="_blank" href="#">Guru
+ 						</a>
+						<a class="dropdown-item" href="<?= base_url('auth/login') ?>">Tata Usaha
  						</a>
  					</div>
  				</li>
