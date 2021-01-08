@@ -4,10 +4,10 @@
     -->
 	<div class="logo">
 		<a href="http://www.creative-tim.com" class="simple-text logo-mini">
-			ADMIN
+			SMK
 		</a>
 		<a href="http://www.creative-tim.com" class="simple-text logo-normal">
-			SMK KESDA BERGAS
+			KESDA BERGAS
 		</a>
 	</div>
 	<div class="sidebar-wrapper" id="sidebar-wrapper">
@@ -26,17 +26,17 @@
 				$submenu = $this->menu->getSubmenu($menu->id);
 			?>
 
-				<li class="nav-item">
+				<li class="nav-item dropdown">
 					<?php if ($submenu) : ?>
-						<a class="nav-link collapsed" href="<?= base_url() ?>" data-toggle="collapse" data-target="#collapse<?= $menu->id ?>" aria-expanded="true" aria-controls="collapse">
+						<a class="nav-link dropdown-toggle" href="<?= base_url() ?>" id="navbarDropdownMenuLink<?= $menu->id ?>" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							<i class="<?= $menu->icon ?>"></i>
 							<span><?= $menu->title ?></span>
 						</a>
 
-						<div id="collapse<?= $menu->id ?>" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-							<div class="bg-white py-2 collapse-inner rounded">
+						<div data-target="#navbarDropdownMenuLink<?= $menu->id ?>">
+							<div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdownMenuLink">
 								<?php foreach ($submenu as $sm) : ?>
-									<a class="collapse-item" href="<?= base_url() . $sm->sub_url ?>"><?= $sm->sub_title ?></a>
+									<a class="dropdown-item" href="<?= base_url() . $sm->sub_url ?>"><?= $sm->sub_title ?></a>
 								<?php endforeach ?>
 							</div>
 						</div>

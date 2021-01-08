@@ -67,8 +67,8 @@
         </div>
         <div class="modal-body">Klik tombol "Logout" untuk keluar.</div>
         <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-          <a class="btn btn-primary" href="<?= base_url('auth/logout') ?>">Logout</a>
+          <button class="btn btn-success" type="button" data-dismiss="modal">Batal</button>
+          <a class="btn btn-danger" href="<?= base_url('auth/logout') ?>">Logout</a>
         </div>
       </div>
     </div>
