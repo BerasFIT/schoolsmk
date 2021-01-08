@@ -74,6 +74,11 @@
     </div>
   </div>
 
+
+  <!-- Datatables -->
+  <script src="<?= base_url() ?>/asset/admin_assets/vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="<?= base_url() ?>/asset/admin_assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+
   <!--   Core JS Files   -->
   <script src="<?= base_url() ?>/asset/admin_assets/js/core/jquery.min.js"></script>
   <script src="<?= base_url() ?>/asset/admin_assets/js/core/popper.min.js"></script>
