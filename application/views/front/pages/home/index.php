@@ -86,24 +86,17 @@
 				<div class="col-md-6">
 					<div class="team-player">
 						<h4 class="title">Asisten Keperawatan</h4>
-						<p class="category text-primary">Model</p>
 						<p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
 							<a href="#">links</a> for people to be able to follow them outside the site.
 						</p>
-						<a href="#pablo" class="btn btn-success btn-icon btn-round"><i class="fab fa-twitter"></i></a>
-						<a href="#pablo" class="btn btn-success btn-icon btn-round"><i class="fab fa-instagram"></i></a>
-						<a href="#pablo" class="btn btn-success btn-icon btn-round"><i class="fab fa-facebook-square"></i></a>
 					</div>
 				</div>
 				<div class="col-md-6">
 					<div class="team-player">
 						<h4 class="title">Teknologi Laboratorium Medik</h4>
-						<p class="category text-primary">Designer</p>
 						<p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
 							<a href="#">links</a> for people to be able to follow them outside the site.
 						</p>
-						<a href="#pablo" class="btn btn-success btn-icon btn-round"><i class="fab fa-twitter"></i></a>
-						<a href="#pablo" class="btn btn-success btn-icon btn-round"><i class="fab fa-linkedin"></i></a>
 					</div>
 				</div>
 			</div>
@@ -146,3 +139,19 @@
 	</div>
 </div>
 <!-- End of Berita -->
+
+<!-- Lokasi -->
+<div class="last-news mt-5 mb-5">
+	<div class="container">
+		<div class="row d-flex justify-content-center">
+			<div class="col">
+				<h2 class="text-center">Lokasi</h2>
+				<hr>
+			</div>
+		</div>
+		<div class="col-md-12 mb-4">
+			<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="width: 100% !important; height: 300px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.598540753687!2d110.3974263140816!3d-7.172318794821471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70865daa6515db%3A0x8c2392c543f6b6ab!2sSMK%20KESEHATAN%20DARUSSALAM%2C%20BERGAS!5e0!3m2!1sid!2sid!4v1610513140630!5m2!1sid!2sid" aria-label="SMK Kesehatan Darussalam Bergas"></iframe>
+		</div>
+	</div>
+</div>
+<!-- End of Lokasi -->

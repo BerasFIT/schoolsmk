@@ -1,36 +1,18 @@
 <div class="section section-download" id="download-section" data-background-color="black">
 	<div class="container">
-		<div class="row">
-			<div class="col-lg-3 col-md-4 text-center">
-				<img style="width: 200px; height:200px" src="<?= base_url() ?>/asset/landing_assets/img/smk-logo.png">
+		<div class="row text-center">
+			<div class="col-md-auto ml-auto mr-auto">
+				<img class="n-logo" src="<?= base_url() ?>/asset/landing_assets/img/smk-logo.png" width="150px">
 			</div>
-			<div class="col-lg-3 col-md-4">
-				<h5>Tentang Kami</h5>
-				<ul>
-					<a href="<?= base_url('profil/sejarah') ?>">
-						<li>Sejarah</li>
-					</a>
-					<a href="<?= base_url('profil/visimisi') ?>">
-						<li>Visi & Misi</li>
-					</a>
-					<a href="<?= base_url('profil/struktu') ?>">
-						<li>Struktur Organisasi</li>
-					</a>
-					<a href="<?= base_url('profil/fasilitas') ?>">
-						<li>Fasilitas</li>
-					</a>
-				</ul>
-			</div>
-			<div class="col-lg-6 col-md-2">
-				<h5>Kontak Kami</h5>
-				<p>Alamat : JALAN SYEKH PENANGGALAN NO.5, Gebugan, Kec. Bergas, Kab. Semarang Prov. Jawa Tengah</p>
-				<p>Email : smk.islam.asysyuhada@gmail.com</p>
+		</div>
+		<div class="row justify-content-md-center sharing-area text-center">
+			<div class="text-center col-md-12 col-lg-8">
+				<h3>SMK KESEHATAN DARUSSALAM BERGAS</h3>
 			</div>
 		</div>
 	</div>
 </div>
 </div>
-<!--  End  -->
 <footer class="footer" data-background-color="black">
 	<div class="container">
 		<div class="copyright" id="copyright">
@@ -39,5 +21,4 @@
 				document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))
 			</script> | Designed by SMK KESEHATAN DARUSSALAM BERGAS
 		</div>
-	</div>
 </footer>
