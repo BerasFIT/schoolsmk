@@ -1,34 +1,23 @@
-<div class="main-panel" id="main-panel">
-	<!-- Navbar -->
-	<nav class="navbar navbar-expand-lg navbar-transparent  bg-primary  navbar-absolute">
-		<div class="container-fluid">
-			<div class="navbar-wrapper">
-				<div class="navbar-toggle">
-					<button type="button" class="navbar-toggler">
-						<span class="navbar-toggler-bar bar1"></span>
-						<span class="navbar-toggler-bar bar2"></span>
-						<span class="navbar-toggler-bar bar3"></span>
-					</button>
-				</div>
-			</div>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-bar navbar-kebab"></span>
-				<span class="navbar-toggler-bar navbar-kebab"></span>
-				<span class="navbar-toggler-bar navbar-kebab"></span>
-			</button>
-			<div class="collapse navbar-collapse justify-content-end" id="navigation">
-				<ul class="navbar-nav">
-					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<i class="now-ui-icons users_single-02"></i>
-							<p>
-								<span class="d-lg-none d-md-block">Some Actions</span>
-							</p>
-						</a>
-						<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-							<a class="dropdown-item" href="<?= base_url('auth/edit_user/' . $this->session->userdata('id')) ?>">Profile</a>
-							<a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Log Out</a>
-					</li>
-				</ul>
-			</div>
+<ul class="navbar-nav ml-auto">
+
+	<!-- Nav Item - User Information -->
+	<li class="nav-item dropdown no-arrow">
+		<a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			<span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= ucfirst($this->session->userdata('first_name')) . ' ' . ucfirst($this->session->userdata('last_name')) ?></span>
+			<img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+		</a>
+		<!-- Dropdown - User Information -->
+		<div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+			<a class="dropdown-item" href="<?= base_url('auth/edit_user/' . $this->session->userdata('id')) ?>">
+				<i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+			Profile
+			</a>
+			<div class="dropdown-divider"></div>
+			<a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+				<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+			Logout
+			</a>
 		</div>
+	</li>
+
+</ul>
