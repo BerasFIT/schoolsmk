@@ -18,7 +18,7 @@
   <!-- Datatables -->
   <link href="<?= base_url() ?>asset/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
-	<!-- Summernote -->
+  <!-- Summernote -->
   <link href="<?= base_url() ?>asset/vendor/summernote/dist/summernote-bs4.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template-->
@@ -50,19 +50,19 @@
           </button>
 
           <!-- Topbar Navbar -->
-    		<?php $this->load->view('back/layouts/_topbar') ?>
+          <?php $this->load->view('back/layouts/_topbar') ?>
         </nav>
         <!-- End of Topbar -->
 
-			<!-- Begin Page Content -->
-			<?php $this->load->view('back/pages/' . $page) ?>
+        <!-- Begin Page Content -->
+        <?php $this->load->view('back/pages/' . $page) ?>
 
       </div>
       <!-- End of Main Content -->
 
-		<!-- Footer -->
-		<?php $this->load->view('back/layouts/_footer') ?>
-		<!-- End of Footer -->
+      <!-- Footer -->
+      <?php $this->load->view('back/layouts/_footer') ?>
+      <!-- End of Footer -->
 
     </div>
     <!-- End of Content Wrapper -->
@@ -87,67 +87,67 @@
         </div>
         <div class="modal-body">Klik tombol "Logout" untuk keluar.</div>
         <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-          <a class="btn btn-primary" href="<?= base_url('auth/logout') ?>">Logout</a>
+          <button class="btn btn-success" type="button" data-dismiss="modal">Batal</button>
+          <a class="btn btn-danger" href="<?= base_url('auth/logout') ?>">Logout</a>
         </div>
       </div>
     </div>
   </div>
 
-   <!-- Bootstrap core JavaScript-->
-   <script src="<?= base_url() ?>asset/vendor/jquery/jquery.min.js"></script>
-	<script src="<?= base_url() ?>asset/vendor/popper/popper.min.js"></script>
-   <script src="<?= base_url() ?>asset/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <!-- Bootstrap core JavaScript-->
+  <script src="<?= base_url() ?>asset/vendor/jquery/jquery.min.js"></script>
+  <script src="<?= base_url() ?>asset/vendor/popper/popper.min.js"></script>
+  <script src="<?= base_url() ?>asset/vendor/bootstrap/js/bootstrap.min.js"></script>
 
-   <!-- Core plugin JavaScript-->
-   <script src="<?= base_url() ?>asset/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <!-- Core plugin JavaScript-->
+  <script src="<?= base_url() ?>asset/vendor/jquery-easing/jquery.easing.min.js"></script>
 
-   <!-- Datatables -->
-   <script src="<?= base_url() ?>asset/vendor/datatables/jquery.dataTables.min.js"></script>
-   <script src="<?= base_url() ?>asset/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+  <!-- Datatables -->
+  <script src="<?= base_url() ?>asset/vendor/datatables/jquery.dataTables.min.js"></script>
+  <script src="<?= base_url() ?>asset/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
-   <!-- Custom scripts for all pages-->
-   <script src="<?= base_url() ?>asset/js/sb-admin-2.min.js"></script>
+  <!-- Custom scripts for all pages-->
+  <script src="<?= base_url() ?>asset/js/sb-admin-2.min.js"></script>
 
-   <!-- Page level plugins -->
-   <script src="<?= base_url() ?>asset/vendor/chart.js/Chart.min.js"></script>
+  <!-- Page level plugins -->
+  <script src="<?= base_url() ?>asset/vendor/chart.js/Chart.min.js"></script>
 
-	 <!-- Summernote -->
-   <script src="<?= base_url() ?>asset/vendor/summernote/dist/summernote-bs4.min.js"></script>
+  <!-- Summernote -->
+  <script src="<?= base_url() ?>asset/vendor/summernote/dist/summernote-bs4.min.js"></script>
 
-	 <!-- Sweet Alert 2 -->
-   <script src="<?= base_url() ?>asset/vendor/sweetalert2/sweetalert2.js"></script>
+  <!-- Sweet Alert 2 -->
+  <script src="<?= base_url() ?>asset/vendor/sweetalert2/sweetalert2.js"></script>
 
-	<script>
-      $('#summernote').summernote({
-         height: 300,
-			toolbar: [
-				// [groupName, [list of button]]
-				['style', ['bold', 'italic', 'underline', 'clear', 'fontname']],
-				['misc', ['undo', 'redo']],
-				['font', ['strikethrough', 'superscript', 'subscript']],
-				['fontsize', ['fontsize']],
-				['color', ['color']],
-				['para', ['ul', 'ol', 'paragraph']],
-				['height', ['height']],
-				['insert', ['table', 'link', 'hr', 'fullscreen']],
-			],
-			placeholder: 'Masukkan konten berita disini...'
-      });
-   </script>
+  <script>
+    $('#summernote').summernote({
+      height: 300,
+      toolbar: [
+        // [groupName, [list of button]]
+        ['style', ['bold', 'italic', 'underline', 'clear', 'fontname']],
+        ['misc', ['undo', 'redo']],
+        ['font', ['strikethrough', 'superscript', 'subscript']],
+        ['fontsize', ['fontsize']],
+        ['color', ['color']],
+        ['para', ['ul', 'ol', 'paragraph']],
+        ['height', ['height']],
+        ['insert', ['table', 'link', 'hr', 'fullscreen']],
+      ],
+      placeholder: 'Masukkan konten berita disini...'
+    });
+  </script>
 
-	<!-- For Datatable -->
-   <?php 
-      if(isset($datatable)){
-         $this->load->view('back/pages/'. $datatable);
-      }
-   ?>
+  <!-- For Datatable -->
+  <?php
+  if (isset($datatable)) {
+    $this->load->view('back/pages/' . $datatable);
+  }
+  ?>
 
-   <!-- For Chart in Dashboard -->
-  <?php 
-    if(isset($pageChart)){
-      $this->load->view('back/layouts/'. $pageChart);
-    }
+  <!-- For Chart in Dashboard -->
+  <?php
+  if (isset($pageChart)) {
+    $this->load->view('back/layouts/' . $pageChart);
+  }
   ?>
 
 </body>

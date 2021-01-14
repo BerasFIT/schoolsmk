@@ -10,12 +10,12 @@
 		<div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
 			<a class="dropdown-item" href="<?= base_url('auth/edit_user/' . $this->session->userdata('id')) ?>">
 				<i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-			Profile
+				Profile
 			</a>
 			<div class="dropdown-divider"></div>
 			<a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
 				<i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-			Logout
+				Logout
 			</a>
 		</div>
 	</li>
