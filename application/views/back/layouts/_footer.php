@@ -1,7 +1,7 @@
 <footer class="sticky-footer bg-white">
 	<div class="container my-auto">
-		<div class="copyright text-center my-auto">
-		<span>Copyright &copy; SMK ASY-SYUHADA 2020</span>
+		<div class="copyright text-right my-auto">
+			<span>Copyright &copy; SMK KESEHATAN DARUSSALAM BERGAS</span>
 		</div>
 	</div>
 </footer>
