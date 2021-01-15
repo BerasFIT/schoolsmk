@@ -1,8 +1,8 @@
 <!--================Home Banner Area =================-->
 <div class="jumbotron banner_area jumbotron-fluid bg-white">
 	<div class="container">
-	<br>
-	<h1 class="display-4 my-auto text-center">Berita</h1>
+		<br>
+		<h1 class="display-4 my-auto text-center">Berita</h1>
 	</div>
 </div>
 <!--================End Home Banner Area =================-->
@@ -11,13 +11,13 @@
 <div class="last-news mt-5">
 	<div class="container">
 		<div class="row mt-4">
-			<?php foreach($news as $n) : ?>
+			<?php foreach ($news as $n) : ?>
 				<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 my-3">
-					<div class="card" style="width: 15rem; height: 24rem;">
+					<div class="card" style="height: 26rem;">
 						<img style="height:150px" src="<?= base_url('img/berita/thumbs/' . $n->photo) ?>" class="card-img-top">
 						<div class="card-body">
 							<h5 class="card-title"><?= $n->title ?></h5>
-							<p class="card-text"><?= character_limiter($n->content,50) ?></p>
+							<p class="card-text"><?= character_limiter($n->content, 50) ?></p>
 							<a href="<?= base_url("blog/baca/$n->seo_title") ?>" class="btn btn-success btn-sm">Lanjut Membaca<i class="fa fa-angle-right ml-2"></i></a>
 						</div>
 					</div>
@@ -31,7 +31,7 @@
 				<nav aria-label="Page navigation example">
 					<?= $pagination ?>
 				</nav>
-			</div> 
+			</div>
 		</div>
 		<!-- End of Pagination -->
 

@@ -112,8 +112,8 @@
 		</div>
 		<div class="row mt-4">
 			<?php foreach ($berita as $b) : ?>
-				<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-					<div class="card" style="width: 15rem; height: 26rem;">
+				<div class="col-md-3 mb-8">
+					<div class="card">
 						<img style="height:150px" src="<?= base_url('img/berita/thumbs/' . $b->photo) ?>" class="card-img-top">
 						<div class="card-body">
 							<h6 class="card-title"><?= $b->title ?></h6>
