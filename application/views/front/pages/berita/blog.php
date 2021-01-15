@@ -8,7 +8,7 @@
 <!--================End Home Banner Area =================-->
 
 <!-- Berita -->
-<div class="last-news mt-5">
+<div class="last-news">
 	<div class="container">
 		<div class="row mt-4">
 			<?php foreach ($news as $n) : ?>
