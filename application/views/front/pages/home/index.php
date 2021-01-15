@@ -56,25 +56,20 @@
 <!-- End of Carousel -->
 
 <!-- Sambutan -->
-<div class="section section-nucleo-icons">
+<div class="sambutan mt-5">
 	<div class="container">
-		<div class="row">
-			<div class="row mb-4">
-				<div class="col-md-3 text-md-right">
-					<img src="<?= base_url('img/sambutan/' . $sambutan->photo) ?>" alt="Circle Image" class="rounded-circle">
-				</div>
-				<div class="col-md-8 ">
-					<h3 class="text-uppercase text-letter-spacing-xs mt-0 mb-1 text-dark font-weight-bold">
-						Sambutan Kepala Sekolah
-					</h3>
-					<hr class="hr-primary w-70 ml-0 mb-3">
-					<p class="text-justify"><?= $sambutan->content ?></p>
-				</div>
+		<div class="row justify-content-center">
+			<div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
+				<h2>Sambutan Kepala Sekolah</h2>
+				<hr>
+				<p class="text-justify"><?= $sambutan->content ?></p>
+			</div>
+			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-5 text-center">
+				<img src="<?= base_url('img/sambutan/' . $sambutan->photo) ?>" class="img-thumbnail img-fluid rounded-circle">
 			</div>
 		</div>
 	</div>
 </div>
-
 <!-- End of Sambutan -->
 
 <!-- Jurusan -->
