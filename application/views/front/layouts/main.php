@@ -13,6 +13,7 @@
    <!-- CSS Files -->
    <link href="<?= base_url() ?>/asset/landing_assets/css/bootstrap.min.css" rel="stylesheet" />
    <link href="<?= base_url() ?>/asset/landing_assets/css/now-ui-kit.css?v=1.3.0" rel="stylesheet" />
+   <link href="<?= base_url() ?>/asset/landing_assets/demo/demo.css" rel="stylesheet" />
 
    <title><?= $title ?> - SMK Kesehatan Darussalam Bergas</title>
 </head>
