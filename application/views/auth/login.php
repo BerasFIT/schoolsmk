@@ -1,5 +1,35 @@
 <?php $this->load->view('auth/templates/header') ?>
 
+<style>
+	.img-gradient:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		display: inline-block;
+		background: -moz-linear-gradient(top, rgba(0, 47, 75, 0.5) 0%, rgba(29, 201, 89, 0.5) 100%);
+		/* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(29, 201, 89, 0.5)), color-stop(100%, rgba(0, 47, 75, 0.5)));
+		/* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top, rgba(0, 47, 75, 0.5) 0%, rgba(29, 201, 89, 0.5) 100%);
+		/* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top, rgba(0, 47, 75, 0.5) 0%, rgba(29, 201, 89, 0.5) 100%);
+		/* Opera 11.10+ */
+		background: -ms-linear-gradient(top, rgba(0, 47, 75, 0.5) 0%, rgba(29, 201, 89, 0.5) 100%);
+		/* IE10+ */
+		background: linear-gradient(to bottom, rgba(0, 47, 75, 0.5) 0%, rgba(29, 201, 89, 0.5) 100%);
+		/* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#002f4b', endColorstr='#00000000', GradientType=0);
+		/* IE6-9 */
+	}
+
+	.img-gradient img {
+		display: block;
+	}
+</style>
+
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg bg-success fixed-top navbar-transparent " color-on-scroll="350">
    <div class="container">
@@ -24,7 +54,7 @@
    </div>
 </nav>
 <!-- End Navbar -->
-<div class="page-header clear-filter" filter-color="green">
+<div class="page-header clear-filter img-gradient">
    <div class="page-header-image" style="background-image: url(<?= base_url('img/background/' . $jurusan->photo) ?>)"></div>
    <div class="content">
       <div class="container">

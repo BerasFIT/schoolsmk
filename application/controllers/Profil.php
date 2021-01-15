@@ -8,12 +8,14 @@ class Profil extends CI_Controller {
 		parent::__construct();
 		$this->load->model('fasilitas_model', 'fasilitas');
 		$this->load->model('struktur_model', 'struktur');
+		$this->load->model('sejarah_model', 'sejarah');
 	}
 	
 	public function sejarah()
 	{
 		$data['title']		= 'Sejarah';
 		$data['page']		= 'profil/sejarah';
+		$data['sejarah'] = $this->sejarah->getData();
 
 		$this->load->view('front/layouts/main', $data);
 	}
