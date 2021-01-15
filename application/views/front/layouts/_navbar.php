@@ -30,10 +30,6 @@
  						<p>Login</p>
  					</a>
  					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink1">
- 						<a class="dropdown-item" href="./index.html">Siswa
- 						</a>
- 						<a class="dropdown-item" target="_blank" href="#">Guru
- 						</a>
 						<a class="dropdown-item" href="<?= base_url('auth/login') ?>">Tata Usaha
  						</a>
  					</div>
