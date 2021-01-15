@@ -5,7 +5,8 @@
 	<h1 class="display-4 my-auto text-center">Sejarah</h1>
 		<div class="row pt-5 pb-5">
 			<img src="<?= base_url('img/sejarah/' . $sejarah->photo) ?>" class="img-fluid">
-		<div class="row pt-5 pb-5 text-justify">
+		</div>
+		<div class="row text-justify">
 			<?= $sejarah->content ?>
 		</div>
 	</div>

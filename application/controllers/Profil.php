@@ -9,6 +9,7 @@ class Profil extends CI_Controller {
 		$this->load->model('fasilitas_model', 'fasilitas');
 		$this->load->model('struktur_model', 'struktur');
 		$this->load->model('sejarah_model', 'sejarah');
+		$this->load->model('visimisi_model', 'visimisi');
 	}
 	
 	public function sejarah()
@@ -24,6 +25,7 @@ class Profil extends CI_Controller {
 	{
 		$data['title']		= 'Visi & Misi';
 		$data['page']		= 'profil/visimisi';
+		$data['visimisi'] = $this->visimisi->getData();
 
 		$this->load->view('front/layouts/main', $data);
 	}
