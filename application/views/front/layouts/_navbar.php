@@ -1,5 +1,5 @@
  <!-- Navbar -->
- <?php if ($title == 'Sejarah' || $title == 'Visi & Misi' || $title == 'Struktur Organisasi' || $title == 'Fasilitas' || $title == 'Asisten Keperawatan' || $title == 'Teknologi Laboratorium Medik' || $title == 'Tata Tertib' || $title == 'Agenda' || $title == 'Berita'){ ?>
+ <?php if ($title == 'Sejarah' || $title == 'Visi & Misi' || $title == 'Struktur Organisasi' || $title == 'Fasilitas' || $title == 'Asisten Keperawatan' || $title == 'Teknologi Laboratorium Medik' || $title == 'Tata Tertib' || $title == 'Agenda' || $title == 'Berita' || $title == 'Ekstrakurikuler'){ ?>
 	 		<nav class='navbar navbar-expand-lg bg-success fixed-top'> <?php ; 
  		}else{ ?>
 			 <nav class='navbar navbar-expand-lg bg-success fixed-top navbar-transparent' color-on-scroll='350'> <?php ;
@@ -25,7 +25,7 @@
  						<p>Beranda</p>
  					</a>
  				</li>
- 				<li class="nav-item dropdown <?php if ($title == 'Sejarah' || $title == 'Visi & Misi' || $title == 'Struktur Organisasi' || $title == 'Fasilitas') echo "active"; ?>">
+ 				<li class="nav-item dropdown <?php if ($title == 'Sejarah' || $title == 'Visi & Misi' || $title == 'Struktur Organisasi' || $title == 'Fasilitas' || $title == 'Ekstrakurikuler') echo "active"; ?>">
  					<a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" data-toggle="dropdown">
  						<p>Profil</p>
  					</a>
@@ -37,6 +37,8 @@
  						<a class="dropdown-item" href="<?= base_url('profil/struktur') ?>"> Struktur Organisasi
  						</a>
  						<a class="dropdown-item" href="<?= base_url('profil/fasilitas') ?>"> Fasilitas
+ 						</a>
+						<a class="dropdown-item" href="<?= base_url('profil/ekstrak') ?>"> Ekstrakurikuler
  						</a>
  					</div>
  				</li>

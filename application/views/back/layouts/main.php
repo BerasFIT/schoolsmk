@@ -137,6 +137,19 @@
     });
   </script>
 
+<script src="<?= base_url("asset/tinymce/js/tinymce/tinymce.min.js") ?>"></script>
+	<script>
+		tinymce.init({
+			selector: '.textEditor',
+			plugins: 'link lists image advlist fullscreen media code table emoticons textcolor codesample hr preview',
+			menubar: false,
+			toolbar: [
+				'undo redo | bold italic underline strikethrough forecolor backcolor bullist numlist | blockquote subscript superscript | alignleft aligncenter alignright alignjustify | image media link',
+				' formatselect | cut copy paste selectall | table emoticons hr | removeformat | preview code | fullscreen',
+			],
+		});
+	</script>
+
   <!-- For Datatable -->
   <?php
   if (isset($datatable)) {

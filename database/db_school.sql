@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 16 Jan 2021 pada 12.50
+-- Waktu pembuatan: 16 Jan 2021 pada 18.08
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.4.1
 
@@ -102,6 +102,26 @@ INSERT INTO `bg_majors` (`id`, `photo`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `ekstra`
+--
+
+CREATE TABLE `ekstra` (
+  `id` int(11) NOT NULL,
+  `name` text NOT NULL,
+  `photo` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `ekstra`
+--
+
+INSERT INTO `ekstra` (`id`, `name`, `photo`) VALUES
+(1, 'Tapak Suci', 'tapak-suci.jpg'),
+(2, 'Musik', 'musik-20210116173845.jpg');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `facilities`
 --
 
@@ -164,7 +184,7 @@ CREATE TABLE `identity` (
 --
 
 INSERT INTO `identity` (`id`, `meta_title`, `meta_description`, `meta_keyword`, `photo`) VALUES
-(1, '', 'Himbauan untuk siswa dan siswi SMK ASY-SYUHADA ROESLY  untuk tetap fokus untuk belajar dengan baik, amanah, serta berakhlak mulia.', 'SMK ASY-SYUHADA ROESLY', '18efe02e7fcc5c6a4ee8c619e501a7d9.png');
+(1, '', 'Himbauan untuk siswa dan siswi SMK KESEHATAN DARUSSALAM BERGAS untuk tetap fokus untuk belajar dengan baik, amanah, serta berakhlak mulia.', 'SMK KESEHATAN DARUSSALAM BERGAS', '18efe02e7fcc5c6a4ee8c619e501a7d9.png');
 
 -- --------------------------------------------------------
 
@@ -276,15 +296,14 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`id`, `title`, `seo_title`, `content`, `photo`, `is_active`, `date`) VALUES
-(1, 'Peserta Ujikom', 'peserta-ujikom', '<p>Kegiatan dan pelatihan siswa dan siswi peserta ujikom, dilaksanakan dengan kesenangan serta antusian siswa dan siswi SMK ASY-SYUHADA ROESLY.<br></p>', '-20200430120422.jpeg', 'Y', '2020-04-30'),
+(1, 'Peserta Ujikom', 'peserta-ujikom', '<p>Kegiatan dan pelatihan siswa dan siswi peserta ujikom, dilaksanakan dengan kesenangan serta antusias siswa dan siswi SMK KESEHATAN DARUSSALAM BERGAS.</p>', '-20200430120422.jpeg', 'Y', '2021-01-16'),
 (2, 'Kegiatan Outdoor', 'kegiatan-outdoor', '<p>Kegiatan outdoor yang sangat menyenangkan dan semangat yang membara.<br></p>', '-20200430120805.jpeg', 'Y', '2020-04-30'),
 (3, 'Perayaan Hari Batik Nasional', 'perayaan-hari-batik-nasional', '<p>Hari raya batik nasional dilakukan dengan membatik pada kain yang dilakukan oleh seluruh aspek di sekolah.<br></p>', '-20200430121231.jpg', 'Y', '2020-04-30'),
 (4, 'Doa Bersama ', 'doa-bersama', '<p>Doa bersama sebelum dilaksanakannya Ujian Nasional, agar diberikan kemudahan .<br></p>', '-20200430121342.jpg', 'Y', '2020-04-30'),
 (5, 'Kegiatan dengan Polisi', 'kegiatan-dengan-polisi', '<p>Mengajarkan tentang etika berkendara saat di jalan raya.<br></p>', 'kegiatan-dengan-polisi-20200430121645.jpg', 'Y', '2020-04-30'),
 (6, 'Mentoring dengan Profesional', 'mentoring-dengan-profesional', 'Mentoring yang dilakukan oleh Bapak Bapak Profesional.<br>', 'mentoring-dengan-profesional-20200430121728.jpg', 'Y', '2020-04-30'),
 (7, 'Pentas Seni Tahunan', 'pentas-seni-tahunan', '<p>Pentas seni yang dilakukan setiap tahun ini merupakan sebuah tradisi.<br></p>', 'pentas-seni-tahunan-20200430121831.jpg', 'Y', '2020-04-30'),
-(8, 'Dzikir Bareng', 'dzikir-bareng', '<p>Dzikir bareng agar dapet pahala dan terhindar dari panasnya api neraka.<br></p>', 'dzikir-bareng-20200430121951.jpg', 'Y', '2020-04-30'),
-(9, 'Coba 123', 'coba-123', 'ini adalah percobaan', 'coba-123-20210105041404.jpg', 'Y', '2021-01-05');
+(8, 'Dzikir Bareng', 'dzikir-bareng', '<p>Dzikir bareng agar dapet pahala dan terhindar dari panasnya api neraka.<br></p>', 'dzikir-bareng-20200430121951.jpg', 'Y', '2020-04-30');
 
 -- --------------------------------------------------------
 
@@ -350,7 +369,8 @@ INSERT INTO `submenus` (`id`, `menu_id`, `sub_title`, `sub_url`, `is_active`) VA
 (7, 2, 'Sejarah', 'sejarah', 'Y'),
 (8, 2, 'Struktur Organisasi', 'struktur', 'Y'),
 (9, 3, 'Asisten Keperawatan', 'asisten', 'Y'),
-(10, 3, 'Tek. Lab. Medik', 'laborat', 'Y');
+(10, 3, 'Tek. Lab. Medik', 'laborat', 'Y'),
+(11, 2, 'Ekstrakurikuler', 'ekstra', 'Y');
 
 -- --------------------------------------------------------
 
@@ -404,7 +424,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `email`, `activation_selector`, `activation_code`, `forgotten_password_selector`, `forgotten_password_code`, `forgotten_password_time`, `remember_selector`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2y$12$63pqg8Mtq8ABN3c59RD2.OLMNLSV2hEij7bo1n59XNQFoM/xSz.iS', 'admin@mail.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1610787948, 1, 'Admin', 'SMK Kesehatan Darussalam', NULL, '');
+(1, '127.0.0.1', 'administrator', '$2y$12$63pqg8Mtq8ABN3c59RD2.OLMNLSV2hEij7bo1n59XNQFoM/xSz.iS', 'admin@mail.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1610814014, 1, 'Admin', 'SMK Kesehatan Darussalam', NULL, '');
 
 -- --------------------------------------------------------
 
@@ -471,6 +491,12 @@ ALTER TABLE `banners`
 -- Indeks untuk tabel `bg_majors`
 --
 ALTER TABLE `bg_majors`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `ekstra`
+--
+ALTER TABLE `ekstra`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -606,6 +632,12 @@ ALTER TABLE `bg_majors`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT untuk tabel `ekstra`
+--
+ALTER TABLE `ekstra`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT untuk tabel `facilities`
 --
 ALTER TABLE `facilities`
@@ -675,7 +707,7 @@ ALTER TABLE `structure`
 -- AUTO_INCREMENT untuk tabel `submenus`
 --
 ALTER TABLE `submenus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT untuk tabel `tatatertib`

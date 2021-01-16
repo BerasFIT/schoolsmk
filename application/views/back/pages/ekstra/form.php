@@ -1,26 +1,26 @@
 <div class="container">
 	<div class="row mb-4">
 		<div class="col">
-			<h3>Form Update Sejarah</h3>
+			<h3>Form <?= $title ?></h3>
 		</div>
 	</div>
 
 	<?= form_open_multipart($form_action) ?>
-		<?= isset($content->id) ? form_hidden('id', $content->id) : '' ?>
+		<?= isset($input->id) ? form_hidden('id', $input->id) : '' ?>
 
 		<div class="form-group row">
-			<label for="sejarah" class="col-sm-2 col-form-label">Sejarah</label>
+			<label for="name" class="col-sm-2 col-form-label">Nama Ekstrakurikuler</label>
 			<div class="col-sm-8">
-				<textarea name="content" id="content" class="textEditor form-control" rows="10" value="<?= $content->content ?>"><?= $content->content ?></textarea>
-				<?= form_error('content', '<small class="form-text text-danger">', '</small>') ?>
+				<input type="text" name="name" id="name" value="<?= $input->name ?>" required class="form-control">
+				<?= form_error('name', '<small class="form-text text-danger">', '</small>') ?>
 			</div>
 		</div>
 
 		<div class="form-group row">
 			<label class="col-sm-2 col-form-label" id="label-photo">Foto</label>
 			<div class="col-sm-8">
-				<?php if(!empty($content->photo)) : ?>
-					<img src="<?= base_url("img/sejarah/$content->photo") ?>" alt="" height="150">
+				<?php if(!empty($input->photo)) : ?>
+					<img src="<?= base_url("img/ekstra/$input->photo") ?>" alt="" height="150">
 				<?php else: ?>
 					<p>No Photo</p>
 				<?php endif; ?>
@@ -38,7 +38,7 @@
 
 		<div class="row mt-4">
 			<div class="col-8 offset-2">
-				<a href="<?= base_url('sejarah') ?>" class="btn btn-sm btn-secondary"><i class="fas fa-angle-left mr-1"></i>Kembali</a>
+				<a href="<?= base_url('ekstra') ?>" class="btn btn-sm btn-secondary"><i class="fas fa-angle-left mr-1"></i>Kembali</a>
 				<button type="submit" class="btn btn-sm btn-primary float-right"><i class="fas fa-check mr-1"></i> Simpan</button>
 			</div>
 		</div>

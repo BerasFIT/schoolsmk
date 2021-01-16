@@ -9,7 +9,7 @@
 	<hr class="sidebar-divider my-0">
 
 	<!-- Nav Item - Dashboard -->
-	<li class="nav-item active">
+	<li class="nav-item <?php if ($title == 'Admin') echo "active"; ?>">
 		<a class="nav-link" href="<?= base_url('admin') ?>">
 			<i class="fas fa-fw fa-tachometer-alt"></i>
 			<span>Dashboard</span></a>
