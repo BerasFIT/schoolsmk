@@ -43,7 +43,7 @@ class Profil extends CI_Controller {
 	{
 		$data['title']		= 'Fasilitas';
 		$data['page']		= 'profil/fasilitas';
-		$data['fasilitas'] = $this->fasilitas->getAllFasility();
+		$data['fasilitas'] = $this->fasilitas->getAllFasilityUnik();
 
 		$this->load->view('front/layouts/main', $data);
 	}

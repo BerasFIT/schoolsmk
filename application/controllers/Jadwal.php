@@ -1,8 +1,8 @@
-<?php 
+<?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Jadwal extends CI_Controller {
-
+	
 	public function __construct()
 	{
 		parent::__construct();
@@ -14,7 +14,7 @@ class Jadwal extends CI_Controller {
 	public function index()
 	{
 		$data['title']		= 'Agenda';
-		$data['page']		= 'agenda/index';
+		$data['page']		= 'jadwal/index';
 		$data['content'] 	= $this->jadwal->getData();
 
 		$this->load->view('back/layouts/main', $data);
@@ -22,15 +22,21 @@ class Jadwal extends CI_Controller {
 
 	public function edit($id)
 	{
-		$this->form_validation->set_rules('photo', 'photo', 'trim');
-		
+		$this->form_validation->set_rules('content', 'Agenda', 'required',
+			['required' => 'Kata agenda tidak boleh kosong!']
+		);
+
 		if($this->form_validation->run() == false){
-			$data['title']			= 'Ubah Agenda Sekolah';
-			$data['page']			= 'agenda/form';
+			$data['title']			= 'Ubah Agenda';
+			$data['page']			= 'jadwal/edit';
 			$data['content']		= $this->jadwal->getData();
 			$data['form_action']	= base_url('jadwal/edit/' . $id);
 			$this->load->view('back/layouts/main', $data);
 		}else{
+			$data = [
+				'content'	=> $this->input->post('content', true),
+			];
+
 			if(!empty($_FILES['photo']['name'])){
 				$upload 	 = $this->jadwal->uploadImage();
 
@@ -48,7 +54,7 @@ class Jadwal extends CI_Controller {
 			}
 
 			$this->jadwal->updateData($id, $data);
-			$this->session->set_flashdata('success', 'Agenda Sekolah Berhasil Diupdate.');
+			$this->session->set_flashdata('success', 'Tata Tertib Berhasil Diupdate.');
 
 			redirect(base_url('jadwal'));
 		}

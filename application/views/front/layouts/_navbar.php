@@ -25,15 +25,6 @@
  						<p>Beranda</p>
  					</a>
  				</li>
- 				<li class="nav-item dropdown">
- 					<a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" data-toggle="dropdown">
- 						<p>Login</p>
- 					</a>
- 					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink1">
-						<a class="dropdown-item" href="<?= base_url('auth/login') ?>">Tata Usaha
- 						</a>
- 					</div>
- 				</li>
  				<li class="nav-item dropdown <?php if ($title == 'Sejarah' || $title == 'Visi & Misi' || $title == 'Struktur Organisasi' || $title == 'Fasilitas') echo "active"; ?>">
  					<a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink1" data-toggle="dropdown">
  						<p>Profil</p>
@@ -54,9 +45,9 @@
  					<p>Jurusan</p>
  					</a>
  					<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink1">
- 						<a class="dropdown-item" href="<?= base_url('jurusan/ap') ?>"> Asisten Keperawatan
+ 						<a class="dropdown-item" href="<?= base_url('jurusan/ak') ?>"> Asisten Keperawatan
  						</a>
- 						<a class="dropdown-item" href="<?= base_url('jurusan/ak') ?>"> Teknologi Laboratorium Medik
+ 						<a class="dropdown-item" href="<?= base_url('jurusan/ap') ?>"> Teknologi Laboratorium Medik
  						</a>
  					</div>
  				</li>

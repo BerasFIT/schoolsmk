@@ -1,0 +1,29 @@
+Halaman utama (Sudah)
+Sejarah (Sudah)
+Visi dan misi (Sudah)
+Struktur organisasi (Sudah)
+Fasilitas (Sudah)
+Jurusan (Sudah)
+Tata tertib (Sudah)
+Agenda (Sudah)
+Berita sekolah (Sudah)
+Ekstrakurikuler
+Prestasi sekolah
+Daftar guru
+
+
+Halaman Utama fas fa-fw fa-home
+	Identitas Web identitas, y
+	Sambutan sambutan, y
+	Banner banner, y
+	Background Login background, y
+Profil Sekolah fas fa-fw fa-user
+	Sejarah sejarah, y
+	Struktur Organisasi struktur, y
+	Fasilitas fasilitas, y
+Jurusan fas fa-fw fa-flask
+	Asisten Keperawatan asisten, y
+	Tek. Laboratorium Medik laborat, y
+Agenda jadwal, y fas fa-fw fa-calendar
+Berita berita, y fas fa-fw fa-newspaper-o
+Manajemen Admin user, y fas fa-fw fa-user

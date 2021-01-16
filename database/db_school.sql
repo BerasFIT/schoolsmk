@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 15 Jan 2021 pada 15.31
+-- Waktu pembuatan: 16 Jan 2021 pada 12.50
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.4.1
 
@@ -30,15 +30,35 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `agenda` (
   `id` int(11) NOT NULL,
-  `photo` varchar(100) NOT NULL
+  `content` text NOT NULL,
+  `photo` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data untuk tabel `agenda`
 --
 
-INSERT INTO `agenda` (`id`, `photo`) VALUES
-(5, '20db093ab926d030b16d9c2aedc6f094.png');
+INSERT INTO `agenda` (`id`, `content`, `photo`) VALUES
+(5, '<p><strong>Januari 2020</strong></p>\r\n<ol>\r\n<li>Seminar</li>\r\n<li>Wawancara</li>\r\n<li>Kuliah Online</li>\r\n</ol>\r\n<p><strong>Februari 2020</strong></p>\r\n<ol>\r\n<li>Seminar</li>\r\n</ol>', '20db093ab926d030b16d9c2aedc6f094.png');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `asisten`
+--
+
+CREATE TABLE `asisten` (
+  `id` int(11) NOT NULL,
+  `content` text NOT NULL,
+  `photo` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `asisten`
+--
+
+INSERT INTO `asisten` (`id`, `content`, `photo`) VALUES
+(1, '<h4>A. Apa itu jurusan Asisten Keperawatan?</h4>\r\n Pada saat kesadaran berpendidikan itu tumbuh dari kota sampai di desa, terasa sekali lembaga dan sarana prasarana yang disediakan oleh pemerintah jauh dari cukup. Sehingga diperlukan kontribusi pihak swasta untuk berperan dalam mendirikan lembaga pendidikan dan memberikan pelayanan pendidikan bagi anak bangsa yang membutuhkan layanan pedidikan. Karena itu pada hari rabu, tanggal 2 mei 2007, yayasan Asy-Syuhada Roeslie merekomendasikan pendirian Smp Dan Smk Asy-Syuhada kepada dinas pendidikan kabupaten bogor.\r\n <br>\r\n <br>', 'def.png');
 
 -- --------------------------------------------------------
 
@@ -149,6 +169,25 @@ INSERT INTO `identity` (`id`, `meta_title`, `meta_description`, `meta_keyword`, 
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `laborat`
+--
+
+CREATE TABLE `laborat` (
+  `id` int(11) NOT NULL,
+  `content` text NOT NULL,
+  `photo` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `laborat`
+--
+
+INSERT INTO `laborat` (`id`, `content`, `photo`) VALUES
+(1, '<h4>A. Apa itu jurusan Teknologi Laboratorium Medik?</h4>\r\n Pada saat kesadaran berpendidikan itu tumbuh dari kota sampai di desa, terasa sekali lembaga dan sarana prasarana yang disediakan oleh pemerintah jauh dari cukup. Sehingga diperlukan kontribusi pihak swasta untuk berperan dalam mendirikan lembaga pendidikan dan memberikan pelayanan pendidikan bagi anak bangsa yang membutuhkan layanan pedidikan. Karena itu pada hari rabu, tanggal 2 mei 2007, yayasan Asy-Syuhada Roeslie merekomendasikan pendirian Smp Dan Smk Asy-Syuhada kepada dinas pendidikan kabupaten bogor.\r\n <br>\r\n <br>', 'def.png');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `login_attempts`
 --
 
@@ -192,9 +231,10 @@ CREATE TABLE `menus` (
 INSERT INTO `menus` (`id`, `user_id`, `title`, `url`, `icon`, `is_active`) VALUES
 (1, 2, 'Halaman Utama', '', 'fas fa-fw fa-home', 'Y'),
 (2, 2, 'Profil Sekolah', '', 'fas fa-fw fa-school', 'Y'),
-(3, 2, 'Agenda', 'jadwal', 'fas fa-fw fa-calendar', 'Y'),
-(4, 2, 'Berita', 'berita', 'fas fa-fw fa-newspaper', 'Y'),
-(5, 1, 'Manajemen Admin', 'user', 'fas fa-fw fa-user', 'Y');
+(3, 2, 'Jurusan', '', 'fas fa-fw fa-flask', 'Y'),
+(4, 2, 'Agenda', 'jadwal', 'fas fa-fw fa-calendar', 'Y'),
+(5, 2, 'Berita', 'berita', 'fas fa-fw fa-newspaper', 'Y'),
+(6, 1, 'Manajemen Admin', 'user', 'fas fa-fw fa-user', 'Y');
 
 -- --------------------------------------------------------
 
@@ -308,7 +348,28 @@ INSERT INTO `submenus` (`id`, `menu_id`, `sub_title`, `sub_url`, `is_active`) VA
 (4, 2, 'Fasilitas', 'fasilitas', 'Y'),
 (6, 1, 'Background Login', 'background', 'Y'),
 (7, 2, 'Sejarah', 'sejarah', 'Y'),
-(8, 2, 'Struktur Organisasi', 'struktur', 'Y');
+(8, 2, 'Struktur Organisasi', 'struktur', 'Y'),
+(9, 3, 'Asisten Keperawatan', 'asisten', 'Y'),
+(10, 3, 'Tek. Lab. Medik', 'laborat', 'Y');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tatatertib`
+--
+
+CREATE TABLE `tatatertib` (
+  `id` int(11) NOT NULL,
+  `content` text NOT NULL,
+  `photo` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tatatertib`
+--
+
+INSERT INTO `tatatertib` (`id`, `content`, `photo`) VALUES
+(1, '<h4>A. Latar Belakang Berdirinya SMK Kesehatan Darussalam Bergas</h4>\r\n<p>Pada saat kesadaran berpendidikan itu tumbuh dari mulai dikota-kota sampai di desa, terasa sekali lembaga dan sarana prasarana yang disediakan oleh pemerintah jauh dari cukup. Sehingga diperlukan kontribusi pihak swasta untuk berperan dalam mendirikan lembaga pendidikan dan memberikan pelayanan pendidikan bagi anak bangsa yang membutuhkan layanan pedidikan. Karena itu pada hari rabu, tanggal 2 mei 2007, yayasan Asy-Syuhada Roeslie merekomendasikan pendirian Smp Dan Smk Asy-Syuhada kepada dinas pendidikan kabupaten bogor.</p>\r\n<p> </p>\r\n<p><strong>Download</strong></p>', 'tata-tertib.png');
 
 -- --------------------------------------------------------
 
@@ -343,7 +404,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `email`, `activation_selector`, `activation_code`, `forgotten_password_selector`, `forgotten_password_code`, `forgotten_password_time`, `remember_selector`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2y$12$63pqg8Mtq8ABN3c59RD2.OLMNLSV2hEij7bo1n59XNQFoM/xSz.iS', 'admin@mail.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1610704913, 1, 'Admin', 'SMK Kesehatan Darussalam', NULL, '');
+(1, '127.0.0.1', 'administrator', '$2y$12$63pqg8Mtq8ABN3c59RD2.OLMNLSV2hEij7bo1n59XNQFoM/xSz.iS', 'admin@mail.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1610787948, 1, 'Admin', 'SMK Kesehatan Darussalam', NULL, '');
 
 -- --------------------------------------------------------
 
@@ -395,6 +456,12 @@ ALTER TABLE `agenda`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `asisten`
+--
+ALTER TABLE `asisten`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `banners`
 --
 ALTER TABLE `banners`
@@ -422,6 +489,12 @@ ALTER TABLE `groups`
 -- Indeks untuk tabel `identity`
 --
 ALTER TABLE `identity`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `laborat`
+--
+ALTER TABLE `laborat`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -474,6 +547,12 @@ ALTER TABLE `submenus`
   ADD KEY `menu_id` (`menu_id`);
 
 --
+-- Indeks untuk tabel `tatatertib`
+--
+ALTER TABLE `tatatertib`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `users`
 --
 ALTER TABLE `users`
@@ -509,6 +588,12 @@ ALTER TABLE `agenda`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT untuk tabel `asisten`
+--
+ALTER TABLE `asisten`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT untuk tabel `banners`
 --
 ALTER TABLE `banners`
@@ -536,6 +621,12 @@ ALTER TABLE `groups`
 -- AUTO_INCREMENT untuk tabel `identity`
 --
 ALTER TABLE `identity`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT untuk tabel `laborat`
+--
+ALTER TABLE `laborat`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
@@ -584,7 +675,13 @@ ALTER TABLE `structure`
 -- AUTO_INCREMENT untuk tabel `submenus`
 --
 ALTER TABLE `submenus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT untuk tabel `tatatertib`
+--
+ALTER TABLE `tatatertib`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`

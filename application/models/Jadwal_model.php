@@ -5,7 +5,7 @@ class Jadwal_model extends CI_Model {
 
 	public function getData()
 	{
-		return $this->db->get_where('agenda')->row();
+		return $this->db->get('agenda')->row();
 	}
 
 	public function updateData($id, $data)
@@ -13,7 +13,7 @@ class Jadwal_model extends CI_Model {
 		$this->db->update('agenda', $data, ['id' => $id]);
 		return $this->db->affected_rows();
 	}
-	
+
 	public function uploadImage(){
       $config = [
         'upload_path'     => './img/agenda',

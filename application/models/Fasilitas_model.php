@@ -13,6 +13,11 @@ class Fasilitas_model extends CI_Model {
 		return $this->db->get('facilities')->result();
 	}
 
+	public function getAllFasilityUnik()
+	{
+		return $this->db->query("select id,name,photo, replace(name , ' ','') unik from facilities")->result();
+	}
+
 	public function insert($data)
 	{
 		$this->db->insert('facilities', $data);
