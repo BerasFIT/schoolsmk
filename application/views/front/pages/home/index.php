@@ -81,16 +81,16 @@
 				<div class="col-md-6">
 					<div class="team-player">
 						<h4 class="title">Asisten Keperawatan</h4>
-						<p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-							<a href="#">links</a> for people to be able to follow them outside the site.
+						<p class="description">Detail penjelasan tentang jurusan asisten keperawatan dapat diakses dengan klik link
+							<a href="<?= base_url('jurusan/ak') ?>">disini</a>.
 						</p>
 					</div>
 				</div>
 				<div class="col-md-6">
 					<div class="team-player">
 						<h4 class="title">Teknologi Laboratorium Medik</h4>
-						<p class="description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some
-							<a href="#">links</a> for people to be able to follow them outside the site.
+						<p class="description">Detail penjelasan tentang jurusan teknologi laboratorium medik dapat diakses dengan klik link
+							<a href="<?= base_url('jurusan/ap') ?>">disini</a>.
 						</p>
 					</div>
 				</div>

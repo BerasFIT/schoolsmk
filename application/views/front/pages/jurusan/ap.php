@@ -4,7 +4,7 @@
 	<div class="container">
 	<h1 class="display-4 my-auto text-center">Teknologi Laboratorium Medik</h1>
 		<div class="row pt-5 pb-5">
-			<img src="<?= base_url('img/sejarah/' . $laborat->photo) ?>" class="img-fluid">
+			<img src="<?= base_url('img/laborat/' . $laborat->photo) ?>" class="img-fluid">
 		</div>
 		<div class="row text-justify">
 			<?= $laborat->content ?>

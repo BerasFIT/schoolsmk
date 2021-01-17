@@ -9,6 +9,8 @@ class Home extends CI_Controller {
 		$this->load->model('banner_model', 'banner');
 		$this->load->model('identitas_model', 'identitas');
 		$this->load->model('sambutan_model', 'sambutan');
+		$this->load->model('asisten_model', 'asisten');
+		$this->load->model('laborat_model', 'laborat');
 		$this->load->model('berita_model', 'berita');
 		$this->load->model('background_model', 'background');
 	}
@@ -21,6 +23,8 @@ class Home extends CI_Controller {
 		$data['sambutan'] = $this->sambutan->getData();
 		$data['berita']	= $this->berita->getLastNews();
 		$data['jurusan']	= $this->background->getData();
+		$data['laborat'] = $this->laborat->getData();
+		$data['asisten'] = $this->asisten->getData();
 		$data['page']		= 'home/index';
 
 		$this->load->view('front/layouts/main', $data);
