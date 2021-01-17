@@ -1,5 +1,5 @@
  <!-- Navbar -->
- <?php if ($title == 'Sejarah' || $title == 'Visi & Misi' || $title == 'Struktur Organisasi' || $title == 'Fasilitas' || $title == 'Asisten Keperawatan' || $title == 'Teknologi Laboratorium Medik' || $title == 'Tata Tertib' || $title == 'Agenda' || $title == 'Berita' || $title == 'Ekstrakurikuler' || $title == 'Prestasi Sekolah'){ ?>
+ <?php if ($title == 'Sejarah' || $title == 'Visi & Misi' || $title == 'Struktur Organisasi' || $title == 'Fasilitas' || $title == 'Asisten Keperawatan' || $title == 'Teknologi Laboratorium Medik' || $title == 'Tata Tertib' || $title == 'Agenda' || $title == 'Berita' || $title == 'Ekstrakurikuler' || $title == 'Prestasi Sekolah' || $title == 'Tenaga Kependidikan'){ ?>
 	 		<nav class='navbar navbar-expand-lg bg-success fixed-top'> <?php ; 
  		}else{ ?>
 			 <nav class='navbar navbar-expand-lg bg-success fixed-top navbar-transparent' color-on-scroll='350'> <?php ;
@@ -66,6 +66,11 @@
 				<li class="nav-item <?php if ($title == 'Prestasi Sekolah') echo "active"; ?>">
  					<a class="nav-link" href="<?= base_url('profil/prestasisekolah') ?>">
  						<p>Prestasi</p>
+ 					</a>
+ 				</li>
+				<li class="nav-item <?php if ($title == 'Tenaga Kependidikan') echo "active"; ?>">
+ 					<a class="nav-link" href="<?= base_url('profil/tenagakependidikan') ?>">
+ 						<p>Tenaga Kependidikan</p>
  					</a>
  				</li>
  				<li class="nav-item <?php if ($title == 'Berita') echo "active"; ?>">

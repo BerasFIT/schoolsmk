@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 17 Jan 2021 pada 08.40
+-- Waktu pembuatan: 17 Jan 2021 pada 15.52
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.4.1
 
@@ -168,6 +168,29 @@ INSERT INTO `groups` (`id`, `name`, `description`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `guru`
+--
+
+CREATE TABLE `guru` (
+  `id` int(11) NOT NULL,
+  `nip` text NOT NULL,
+  `nama` text NOT NULL,
+  `pendidikan` text NOT NULL,
+  `pelajaran` text NOT NULL,
+  `jabatan` text NOT NULL,
+  `photo` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `guru`
+--
+
+INSERT INTO `guru` (`id`, `nip`, `nama`, `pendidikan`, `pelajaran`, `jabatan`, `photo`) VALUES
+(1, '456', 'Ok', 'S1 Univ', 'Bahasa Indonesia', 'Guru', '-20210117154244.jpg');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `identity`
 --
 
@@ -185,6 +208,28 @@ CREATE TABLE `identity` (
 
 INSERT INTO `identity` (`id`, `meta_title`, `meta_description`, `meta_keyword`, `photo`) VALUES
 (1, '', 'Himbauan untuk siswa dan siswi SMK KESEHATAN DARUSSALAM BERGAS untuk tetap fokus untuk belajar dengan baik, amanah, serta berakhlak mulia.', 'SMK KESEHATAN DARUSSALAM BERGAS', '18efe02e7fcc5c6a4ee8c619e501a7d9.png');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `kepsek`
+--
+
+CREATE TABLE `kepsek` (
+  `id` int(11) NOT NULL,
+  `nip` text NOT NULL,
+  `nama` text NOT NULL,
+  `pendidikan` text NOT NULL,
+  `jabatan` text NOT NULL,
+  `photo` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `kepsek`
+--
+
+INSERT INTO `kepsek` (`id`, `nip`, `nama`, `pendidikan`, `jabatan`, `photo`) VALUES
+(1, '123', 'Coba Test', 'S2 Universitas Negeri Semarang 2007', 'Kepala Sekolah', '6cc1ec52bf9b2bca406c9f0edca0ab5b.jpg');
 
 -- --------------------------------------------------------
 
@@ -254,9 +299,10 @@ INSERT INTO `menus` (`id`, `user_id`, `title`, `url`, `icon`, `is_active`) VALUE
 (3, 2, 'Jurusan', '', 'fas fa-fw fa-flask', 'Y'),
 (4, 2, 'Agenda', 'jadwal', 'fas fa-fw fa-calendar', 'Y'),
 (5, 2, 'Prestasi Sekolah', 'prestasi', 'fas fa-fw fa-trophy', 'Y'),
-(6, 2, 'Berita', 'berita', 'fas fa-fw fa-newspaper', 'Y'),
-(7, 2, 'Upload File', 'upfile', 'fas fa-fw fa-upload', 'Y'),
-(8, 1, 'Manajemen Admin', 'user', 'fas fa-fw fa-user', 'Y');
+(6, 2, 'Tenaga Kependidikan', '', 'fas fa-fw fa-users', 'Y'),
+(7, 2, 'Berita', 'berita', 'fas fa-fw fa-newspaper', 'Y'),
+(8, 2, 'Upload File', 'upfile', 'fas fa-fw fa-upload', 'Y'),
+(9, 1, 'Manajemen Admin', 'user', 'fas fa-fw fa-user', 'Y');
 
 -- --------------------------------------------------------
 
@@ -276,6 +322,30 @@ CREATE TABLE `opening` (
 
 INSERT INTO `opening` (`id`, `content`, `photo`) VALUES
 (1, 'Era globalisasi dengan segala implikasinya menjadi salah satu pemicu cepatnya perubahan yang terjadi pada berbagai aspek kehidupan masyarakat, dan bila tidak ada upaya sungguh-sungguh untuk mengantisipasinya maka hal tersebut akan menjadi maslah yang sangat serius. Dalam hal ini dunia pendidikan mempunyai tanggung jawab yang besar, terutama dalam menyiapkan sumber daya manusia yang tangguh sehingga mampu hidup selaras didalam perubahan itu sendiri. Pendidikan merupakan investasi jangka panjang yang hasilnya tidak dapat dilihat dan dirasakan secara instan, sehingga sekolah sebagai ujung tombak dilapangan harus memiliki arah pengembangan jangka panjang dengan tahapan pencapaiannya yang jelas dan tetap mengakomodir tuntutan permasalahan faktual kekinian yang ada di masyarakat.', 'e528107af4c68648a6d10cd2cafba74d.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `pegawai`
+--
+
+CREATE TABLE `pegawai` (
+  `id` int(11) NOT NULL,
+  `nip` text NOT NULL,
+  `nama` text NOT NULL,
+  `pendidikan` text NOT NULL,
+  `pelajaran` text NOT NULL,
+  `jabatan` text NOT NULL,
+  `photo` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `pegawai`
+--
+
+INSERT INTO `pegawai` (`id`, `nip`, `nama`, `pendidikan`, `pelajaran`, `jabatan`, `photo`) VALUES
+(1, '345', 'Test Coba', 'D3 Universitas', 'Abc', 'Pustakawati', '-20210117143616.jpeg'),
+(2, '098', 'Hai', 'S1 Universitas', '-', 'Satpam', '-20210117143627.jpeg');
 
 -- --------------------------------------------------------
 
@@ -392,7 +462,10 @@ INSERT INTO `submenus` (`id`, `menu_id`, `sub_title`, `sub_url`, `is_active`) VA
 (8, 2, 'Struktur Organisasi', 'struktur', 'Y'),
 (9, 3, 'Asisten Keperawatan', 'asisten', 'Y'),
 (10, 3, 'Tek. Lab. Medik', 'laborat', 'Y'),
-(11, 2, 'Ekstrakurikuler', 'ekstra', 'Y');
+(11, 2, 'Ekstrakurikuler', 'ekstra', 'Y'),
+(12, 6, 'Kepala Sekolah', 'kepsek', 'Y'),
+(13, 6, 'Pegawai', 'pegawai', 'Y'),
+(14, 6, 'Guru', 'guru', 'Y');
 
 -- --------------------------------------------------------
 
@@ -553,9 +626,21 @@ ALTER TABLE `groups`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `guru`
+--
+ALTER TABLE `guru`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `identity`
 --
 ALTER TABLE `identity`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `kepsek`
+--
+ALTER TABLE `kepsek`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -586,6 +671,12 @@ ALTER TABLE `menus`
 -- Indeks untuk tabel `opening`
 --
 ALTER TABLE `opening`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `pegawai`
+--
+ALTER TABLE `pegawai`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -703,9 +794,21 @@ ALTER TABLE `groups`
   MODIFY `id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT untuk tabel `guru`
+--
+ALTER TABLE `guru`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT untuk tabel `identity`
 --
 ALTER TABLE `identity`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT untuk tabel `kepsek`
+--
+ALTER TABLE `kepsek`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
@@ -730,13 +833,19 @@ ALTER TABLE `majors`
 -- AUTO_INCREMENT untuk tabel `menus`
 --
 ALTER TABLE `menus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT untuk tabel `opening`
 --
 ALTER TABLE `opening`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT untuk tabel `pegawai`
+--
+ALTER TABLE `pegawai`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `posts`
@@ -766,7 +875,7 @@ ALTER TABLE `structure`
 -- AUTO_INCREMENT untuk tabel `submenus`
 --
 ALTER TABLE `submenus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT untuk tabel `tatatertib`

@@ -12,6 +12,9 @@ class Profil extends CI_Controller {
 		$this->load->model('struktur_model', 'struktur');
 		$this->load->model('sejarah_model', 'sejarah');
 		$this->load->model('visimisi_model', 'visimisi');
+		$this->load->model('kepsek_model', 'kepsek');
+		$this->load->model('pegawai_model', 'pegawai');
+		$this->load->model('guru_model', 'guru');
 	}
 	
 	public function sejarah()
@@ -28,6 +31,17 @@ class Profil extends CI_Controller {
 		$data['title']		= 'Visi & Misi';
 		$data['page']		= 'profil/visimisi';
 		$data['visimisi'] = $this->visimisi->getData();
+
+		$this->load->view('front/layouts/main', $data);
+	}
+
+	public function tenagakependidikan()
+	{
+		$data['title']		= 'Tenaga Kependidikan';
+		$data['page']		= 'profil/tenagakependidikan';
+		$data['kepsek'] = $this->kepsek->getData();
+		$data['pegawai'] = $this->pegawai->getAllPegawai();
+		$data['guru'] = $this->guru->getAllGuru();
 
 		$this->load->view('front/layouts/main', $data);
 	}
