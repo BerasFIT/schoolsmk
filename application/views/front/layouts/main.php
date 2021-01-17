@@ -8,12 +8,13 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
    <!--     Fonts and icons     -->
-   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+   <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700,400" rel="stylesheet" />
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
    <!-- CSS Files -->
    <link href="<?= base_url() ?>/asset/landing_assets/css/bootstrap.min.css" rel="stylesheet" />
    <link href="<?= base_url() ?>/asset/landing_assets/css/now-ui-kit.css?v=1.3.0" rel="stylesheet" />
    <link href="<?= base_url() ?>/asset/landing_assets/demo/demo.css" rel="stylesheet" />
+   <link rel="stylesheet" href="<?= base_url() ?>/asset/instagram/css/instagram-widget.css">
 
    <title><?= $title ?> - SMK Kesehatan Darussalam Bergas</title>
 </head>
@@ -47,6 +48,8 @@
    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
    <!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
    <script src="<?= base_url() ?>/asset/landing_assets/js/now-ui-kit.js?v=1.3.0" type="text/javascript"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
+   <script src="<?= base_url() ?>/asset/instagram/js/instagram-widget.js"></script>
    <script>
       $(document).ready(function() {
          // the body of this function is in assets/js/now-ui-kit.js

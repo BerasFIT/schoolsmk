@@ -135,6 +135,32 @@
 </div>
 <!-- End of Berita -->
 
+<!-- Sosmed -->
+<div class="section section-tabs text-center">
+	<div class="container">
+		<h2 class="title">Sosial Media</h2>
+		<div class="team">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="team-player">
+						<h4 class="title">YouTube</h4>
+						<p class="description">Detail penjelasan tentang jurusan asisten keperawatan dapat diakses dengan klik link
+							<a href="<?= base_url('jurusan/ak') ?>">disini</a>.
+						</p>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="team-player">
+						<h4 class="title">Instagram</h4>
+						<div class="instagram__widget" data-user="smkkesehatandarussalam" data-header="yes" data-color="#3897f0" data-width="75vh"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End of Sosmed -->
+
 <!-- Lokasi -->
 <div class="last-news mt-5 mb-5">
 	<div class="container">
