@@ -48,7 +48,7 @@
    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
    <!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
    <script src="<?= base_url() ?>/asset/landing_assets/js/now-ui-kit.js?v=1.3.0" type="text/javascript"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
+   <script src="<?= base_url() ?>/asset/instagram/js/axios.js"></script>
    <script src="<?= base_url() ?>/asset/instagram/js/instagram-widget.js"></script>
    <script>
       $(document).ready(function() {
