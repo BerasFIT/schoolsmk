@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 16 Jan 2021 pada 18.08
+-- Waktu pembuatan: 17 Jan 2021 pada 08.40
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.4.1
 
@@ -58,7 +58,7 @@ CREATE TABLE `asisten` (
 --
 
 INSERT INTO `asisten` (`id`, `content`, `photo`) VALUES
-(1, '<h4>A. Apa itu jurusan Asisten Keperawatan?</h4>\r\n Pada saat kesadaran berpendidikan itu tumbuh dari kota sampai di desa, terasa sekali lembaga dan sarana prasarana yang disediakan oleh pemerintah jauh dari cukup. Sehingga diperlukan kontribusi pihak swasta untuk berperan dalam mendirikan lembaga pendidikan dan memberikan pelayanan pendidikan bagi anak bangsa yang membutuhkan layanan pedidikan. Karena itu pada hari rabu, tanggal 2 mei 2007, yayasan Asy-Syuhada Roeslie merekomendasikan pendirian Smp Dan Smk Asy-Syuhada kepada dinas pendidikan kabupaten bogor.\r\n <br>\r\n <br>', 'def.png');
+(1, '<h4>A. Apa itu jurusan Asisten Keperawatan?</h4>\r\n<p>Pada saat kesadaran berpendidikan itu tumbuh dari kota sampai di desa, terasa sekali lembaga dan sarana prasarana yang disediakan oleh pemerintah jauh dari cukup. Sehingga diperlukan kontribusi pihak swasta untuk berperan dalam mendirikan lembaga pendidikan dan memberikan pelayanan pendidikan bagi anak bangsa yang membutuhkan layanan pedidikan. Karena itu pada hari rabu, tanggal 2 mei 2007, yayasan Asy-Syuhada Roeslie merekomendasikan pendirian Smp Dan Smk Asy-Syuhada kepada dinas pendidikan kabupaten bogor. <br><br></p>', '0097f749bdc41b81a882a84f9f820253.png');
 
 -- --------------------------------------------------------
 
@@ -203,7 +203,7 @@ CREATE TABLE `laborat` (
 --
 
 INSERT INTO `laborat` (`id`, `content`, `photo`) VALUES
-(1, '<h4>A. Apa itu jurusan Teknologi Laboratorium Medik?</h4>\r\n Pada saat kesadaran berpendidikan itu tumbuh dari kota sampai di desa, terasa sekali lembaga dan sarana prasarana yang disediakan oleh pemerintah jauh dari cukup. Sehingga diperlukan kontribusi pihak swasta untuk berperan dalam mendirikan lembaga pendidikan dan memberikan pelayanan pendidikan bagi anak bangsa yang membutuhkan layanan pedidikan. Karena itu pada hari rabu, tanggal 2 mei 2007, yayasan Asy-Syuhada Roeslie merekomendasikan pendirian Smp Dan Smk Asy-Syuhada kepada dinas pendidikan kabupaten bogor.\r\n <br>\r\n <br>', 'def.png');
+(1, '<h4>A. Apa itu jurusan Teknologi Laboratorium Medik?</h4>\r\n<p>Pada saat kesadaran berpendidikan itu tumbuh dari kota sampai di desa, terasa sekali lembaga dan sarana prasarana yang disediakan oleh pemerintah jauh dari cukup. Sehingga diperlukan kontribusi pihak swasta untuk berperan dalam mendirikan lembaga pendidikan dan memberikan pelayanan pendidikan bagi anak bangsa yang membutuhkan layanan pedidikan. Karena itu pada hari rabu, tanggal 2 mei 2007, yayasan Asy-Syuhada Roeslie merekomendasikan pendirian Smp Dan Smk Asy-Syuhada kepada dinas pendidikan kabupaten bogor. <br><br></p>', '6018825273aea0f0cd3fe0fceb16c85d.png');
 
 -- --------------------------------------------------------
 
@@ -253,8 +253,10 @@ INSERT INTO `menus` (`id`, `user_id`, `title`, `url`, `icon`, `is_active`) VALUE
 (2, 2, 'Profil Sekolah', '', 'fas fa-fw fa-school', 'Y'),
 (3, 2, 'Jurusan', '', 'fas fa-fw fa-flask', 'Y'),
 (4, 2, 'Agenda', 'jadwal', 'fas fa-fw fa-calendar', 'Y'),
-(5, 2, 'Berita', 'berita', 'fas fa-fw fa-newspaper', 'Y'),
-(6, 1, 'Manajemen Admin', 'user', 'fas fa-fw fa-user', 'Y');
+(5, 2, 'Prestasi Sekolah', 'prestasi', 'fas fa-fw fa-trophy', 'Y'),
+(6, 2, 'Berita', 'berita', 'fas fa-fw fa-newspaper', 'Y'),
+(7, 2, 'Upload File', 'upfile', 'fas fa-fw fa-upload', 'Y'),
+(8, 1, 'Manajemen Admin', 'user', 'fas fa-fw fa-user', 'Y');
 
 -- --------------------------------------------------------
 
@@ -304,6 +306,26 @@ INSERT INTO `posts` (`id`, `title`, `seo_title`, `content`, `photo`, `is_active`
 (6, 'Mentoring dengan Profesional', 'mentoring-dengan-profesional', 'Mentoring yang dilakukan oleh Bapak Bapak Profesional.<br>', 'mentoring-dengan-profesional-20200430121728.jpg', 'Y', '2020-04-30'),
 (7, 'Pentas Seni Tahunan', 'pentas-seni-tahunan', '<p>Pentas seni yang dilakukan setiap tahun ini merupakan sebuah tradisi.<br></p>', 'pentas-seni-tahunan-20200430121831.jpg', 'Y', '2020-04-30'),
 (8, 'Dzikir Bareng', 'dzikir-bareng', '<p>Dzikir bareng agar dapet pahala dan terhindar dari panasnya api neraka.<br></p>', 'dzikir-bareng-20200430121951.jpg', 'Y', '2020-04-30');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `prestasi`
+--
+
+CREATE TABLE `prestasi` (
+  `id` int(11) NOT NULL,
+  `name` text NOT NULL,
+  `content` text NOT NULL,
+  `photo` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `prestasi`
+--
+
+INSERT INTO `prestasi` (`id`, `name`, `content`, `photo`) VALUES
+(1, 'Juara Debat Bahasa Inggris Jateng 2018', 'Piala Gubernur Jateng', 'juara-debat-bahasa-inggris-jateng-2018-20210117045740.jpg');
 
 -- --------------------------------------------------------
 
@@ -394,6 +416,25 @@ INSERT INTO `tatatertib` (`id`, `content`, `photo`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Struktur dari tabel `upload`
+--
+
+CREATE TABLE `upload` (
+  `id` int(11) NOT NULL,
+  `name` text NOT NULL,
+  `photo` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `upload`
+--
+
+INSERT INTO `upload` (`id`, `name`, `photo`) VALUES
+(1, 'SK Januari 2021', 'sk-januari-2021-20210117081615.pdf');
+
+-- --------------------------------------------------------
+
+--
 -- Struktur dari tabel `users`
 --
 
@@ -424,7 +465,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `email`, `activation_selector`, `activation_code`, `forgotten_password_selector`, `forgotten_password_code`, `forgotten_password_time`, `remember_selector`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2y$12$63pqg8Mtq8ABN3c59RD2.OLMNLSV2hEij7bo1n59XNQFoM/xSz.iS', 'admin@mail.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1610814014, 1, 'Admin', 'SMK Kesehatan Darussalam', NULL, '');
+(1, '127.0.0.1', 'administrator', '$2y$12$63pqg8Mtq8ABN3c59RD2.OLMNLSV2hEij7bo1n59XNQFoM/xSz.iS', 'admin@mail.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1610855306, 1, 'Admin', 'SMK Kesehatan Darussalam', NULL, '');
 
 -- --------------------------------------------------------
 
@@ -554,6 +595,12 @@ ALTER TABLE `posts`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeks untuk tabel `prestasi`
+--
+ALTER TABLE `prestasi`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `sejarah`
 --
 ALTER TABLE `sejarah`
@@ -576,6 +623,12 @@ ALTER TABLE `submenus`
 -- Indeks untuk tabel `tatatertib`
 --
 ALTER TABLE `tatatertib`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `upload`
+--
+ALTER TABLE `upload`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -677,7 +730,7 @@ ALTER TABLE `majors`
 -- AUTO_INCREMENT untuk tabel `menus`
 --
 ALTER TABLE `menus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT untuk tabel `opening`
@@ -690,6 +743,12 @@ ALTER TABLE `opening`
 --
 ALTER TABLE `posts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT untuk tabel `prestasi`
+--
+ALTER TABLE `prestasi`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT untuk tabel `sejarah`
@@ -714,6 +773,12 @@ ALTER TABLE `submenus`
 --
 ALTER TABLE `tatatertib`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT untuk tabel `upload`
+--
+ALTER TABLE `upload`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT untuk tabel `users`
