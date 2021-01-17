@@ -152,7 +152,7 @@
 				<div class="col-md-6">
 					<div class="team-player">
 						<h4 class="title">Instagram</h4>
-						<div class="instagram__widget" data-user="smkkesehatandarussalam" data-header="yes" data-color="#3897f0" data-width="75vh"></div>
+						<div class="instagram__widget" data-user="smkkesehatandarussalam" data-header="yes" data-color="#1CC98A" data-width="75vh"></div>
 					</div>
 				</div>
 			</div>
