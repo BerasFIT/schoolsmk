@@ -7,8 +7,8 @@
 				<!--headin5_amrc-->
 				<p class="mb10">SMK KESEHATAN DARUSSALAM BERGAS</p>
 				<p><i class="fa fa-map-marker"></i> JALAN SYEKH PENANGGALAN NO.1 Semarang, Jawa Tengah 50552 </p>
-				<p><i class="fa fa-phone"></i> (024) 6926938 </p>
-				<p><i class="fa fa fa-envelope"></i> info@example.com </p>
+				<p><i class="fa fa-phone"></i> (024) 6926844 </p>
+				<p><i class="fa fa fa-envelope"></i> smkkesehatandarussalam@yahoo.com</p>
 
 
 			</div>
