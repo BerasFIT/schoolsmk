@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 17 Jan 2021 pada 15.52
+-- Waktu pembuatan: 18 Jan 2021 pada 08.56
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.4.1
 
@@ -39,7 +39,7 @@ CREATE TABLE `agenda` (
 --
 
 INSERT INTO `agenda` (`id`, `content`, `photo`) VALUES
-(5, '<p><strong>Januari 2020</strong></p>\r\n<ol>\r\n<li>Seminar</li>\r\n<li>Wawancara</li>\r\n<li>Kuliah Online</li>\r\n</ol>\r\n<p><strong>Februari 2020</strong></p>\r\n<ol>\r\n<li>Seminar</li>\r\n</ol>', '20db093ab926d030b16d9c2aedc6f094.png');
+(5, '<p><strong>Januari 2020 :</strong></p>\r\n<ol>\r\n<li>Seminar</li>\r\n<li>Wawancara</li>\r\n<li>Kuliah Online</li>\r\n</ol>\r\n<p><strong>Februari 2020 :</strong></p>\r\n<ol>\r\n<li>Seminar</li>\r\n<li>Seminar Kedua</li>\r\n<li>Seminar Ketiga</li>\r\n</ol>', '20db093ab926d030b16d9c2aedc6f094.png');
 
 -- --------------------------------------------------------
 
@@ -300,9 +300,10 @@ INSERT INTO `menus` (`id`, `user_id`, `title`, `url`, `icon`, `is_active`) VALUE
 (4, 2, 'Agenda', 'jadwal', 'fas fa-fw fa-calendar', 'Y'),
 (5, 2, 'Prestasi Sekolah', 'prestasi', 'fas fa-fw fa-trophy', 'Y'),
 (6, 2, 'Tenaga Kependidikan', '', 'fas fa-fw fa-users', 'Y'),
-(7, 2, 'Berita', 'berita', 'fas fa-fw fa-newspaper', 'Y'),
-(8, 2, 'Upload File', 'upfile', 'fas fa-fw fa-upload', 'Y'),
-(9, 1, 'Manajemen Admin', 'user', 'fas fa-fw fa-user', 'Y');
+(7, 2, 'Tata Tertib', 'tatib', 'fas fa-fw fa-book', 'Y'),
+(8, 2, 'Berita', 'berita', 'fas fa-fw fa-newspaper', 'Y'),
+(9, 2, 'Upload File', 'upfile', 'fas fa-fw fa-upload', 'Y'),
+(10, 1, 'Manajemen Admin', 'user', 'fas fa-fw fa-user', 'Y');
 
 -- --------------------------------------------------------
 
@@ -465,7 +466,8 @@ INSERT INTO `submenus` (`id`, `menu_id`, `sub_title`, `sub_url`, `is_active`) VA
 (11, 2, 'Ekstrakurikuler', 'ekstra', 'Y'),
 (12, 6, 'Kepala Sekolah', 'kepsek', 'Y'),
 (13, 6, 'Pegawai', 'pegawai', 'Y'),
-(14, 6, 'Guru', 'guru', 'Y');
+(14, 6, 'Guru', 'guru', 'Y'),
+(15, 2, 'Visi Misi', 'visimisi', 'Y');
 
 -- --------------------------------------------------------
 
@@ -484,7 +486,7 @@ CREATE TABLE `tatatertib` (
 --
 
 INSERT INTO `tatatertib` (`id`, `content`, `photo`) VALUES
-(1, '<h4>A. Latar Belakang Berdirinya SMK Kesehatan Darussalam Bergas</h4>\r\n<p>Pada saat kesadaran berpendidikan itu tumbuh dari mulai dikota-kota sampai di desa, terasa sekali lembaga dan sarana prasarana yang disediakan oleh pemerintah jauh dari cukup. Sehingga diperlukan kontribusi pihak swasta untuk berperan dalam mendirikan lembaga pendidikan dan memberikan pelayanan pendidikan bagi anak bangsa yang membutuhkan layanan pedidikan. Karena itu pada hari rabu, tanggal 2 mei 2007, yayasan Asy-Syuhada Roeslie merekomendasikan pendirian Smp Dan Smk Asy-Syuhada kepada dinas pendidikan kabupaten bogor.</p>\r\n<p> </p>\r\n<p><strong>Download</strong></p>', 'tata-tertib.png');
+(1, '<h4>A. Latar Belakang SMK Kesehatan Darussalam Bergas</h4>\r\n<p>Pada saat kesadaran berpendidikan itu tumbuh dari mulai dikota-kota sampai di desa, terasa sekali lembaga dan sarana prasarana yang disediakan oleh pemerintah jauh dari cukup. Sehingga diperlukan kontribusi pihak swasta untuk berperan dalam mendirikan lembaga pendidikan dan memberikan pelayanan pendidikan bagi anak bangsa yang membutuhkan layanan pedidikan. Karena itu pada hari rabu, tanggal 2 mei 2007, yayasan Asy-Syuhada Roeslie merekomendasikan pendirian Smp Dan Smk Asy-Syuhada kepada dinas pendidikan kabupaten bogor.</p>', 'tata-tertib.png');
 
 -- --------------------------------------------------------
 
@@ -538,7 +540,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `email`, `activation_selector`, `activation_code`, `forgotten_password_selector`, `forgotten_password_code`, `forgotten_password_time`, `remember_selector`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2y$12$63pqg8Mtq8ABN3c59RD2.OLMNLSV2hEij7bo1n59XNQFoM/xSz.iS', 'admin@mail.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1610855306, 1, 'Admin', 'SMK Kesehatan Darussalam', NULL, '');
+(1, '127.0.0.1', 'administrator', '$2y$12$63pqg8Mtq8ABN3c59RD2.OLMNLSV2hEij7bo1n59XNQFoM/xSz.iS', 'admin@mail.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1610951519, 1, 'Admin', 'SMK Kesehatan Darussalam', NULL, '');
 
 -- --------------------------------------------------------
 
@@ -577,7 +579,7 @@ CREATE TABLE `visi` (
 --
 
 INSERT INTO `visi` (`id`, `content`, `photo`) VALUES
-(1, '<h4>VISI</h4>\r\nMelalui proses pembelajaran yang menitikberatkan pada IPTEQ dan IMTAQ, SMK Kesehatan Darussalam Bergas diharapkan mampu mewujudkan lulusan yang berakhlak karimah, beriman, bertaqwa dan siap hidup mandiri.\r\n <br>\r\n <br>\r\n\r\n<h4>MISI</h4>\r\n1. Melaksanakan pembinaan pembelajaran secara efektif dan efisien.\r\n2. Memberikan motivasi kepada peserta didik agar mampu mengenali potensi dirinya sehingga termotivasi untuk mengembangkannya.\r\n3. Mengupayakan jalinan kemitraan dengan instansi pemerintah, swasta, dan perusahaan untuk mendapatkan peluang dalam lapangan pekerjaan.\r\n4. Menerapkan konsep religius dalam bermasyarakat di lingkungan masyarakat sekolah dan lingkungan masyarakat secara umum.\r\n <br>\r\n <br>', 'def.png');
+(1, '<h4>VISI</h4>\r\n<p>Melalui proses pembelajaran yang menitikberatkan pada IPTEQ dan IMTAQ, SMK Kesehatan Darussalam Bergas diharapkan mampu mewujudkan lulusan yang berakhlak karimah, beriman, bertaqwa dan siap hidup mandiri.</p>\r\n<h4>MISI</h4>\r\n<ul>\r\n<li>Melaksanakan pembinaan pembelajaran secara efektif dan efisien.</li>\r\n<li>Memberikan motivasi kepada peserta didik agar mampu mengenali potensi dirinya sehingga termotivasi untuk mengembangkannya.</li>\r\n<li>Mengupayakan jalinan kemitraan dengan instansi pemerintah, swasta, dan perusahaan untuk mendapatkan peluang dalam lapangan pekerjaan.</li>\r\n<li>Menerapkan konsep religius dalam bermasyarakat di lingkungan masyarakat sekolah dan lingkungan masyarakat secara umum. </li>\r\n</ul>', 'visimisi2.png');
 
 --
 -- Indexes for dumped tables
@@ -833,7 +835,7 @@ ALTER TABLE `majors`
 -- AUTO_INCREMENT untuk tabel `menus`
 --
 ALTER TABLE `menus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT untuk tabel `opening`
@@ -875,7 +877,7 @@ ALTER TABLE `structure`
 -- AUTO_INCREMENT untuk tabel `submenus`
 --
 ALTER TABLE `submenus`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT untuk tabel `tatatertib`
