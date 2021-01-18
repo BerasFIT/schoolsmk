@@ -1,9 +1,9 @@
 <!-- Content -->
 <div class="content mt-5 mb-5 pb-5 pt-5">
 	<div class="container">
-		<h2 class="display-5 my-auto text-center">Tenaga Kependidikan</h2>
+		<h1 class="display-5 my-auto text-center">Tenaga Kependidikan</h1>
 
-		<h4><b><?= $kepsek->jabatan ?> SMK Kesehatan Darussalam Bergas</b></h4>
+		<h4 class="mt-5"><b><?= $kepsek->jabatan ?> SMK Kesehatan Darussalam Bergas</b></h4>
 
 		<table cellpadding="10">
 			<tr>
