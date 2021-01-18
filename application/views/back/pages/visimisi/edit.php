@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row mb-4">
 		<div class="col">
-			<h3>Form Update Visi dan Misi</h3>
+			<h3>Form Update Visi Misi</h3>
 		</div>
 	</div>
 
@@ -9,9 +9,9 @@
 		<?= isset($content->id) ? form_hidden('id', $content->id) : '' ?>
 
 		<div class="form-group row">
-			<label for="visimisi" class="col-sm-2 col-form-label">Visi dan Misi</label>
-			<div class="col-sm-8">
-				<textarea name="content" id="content" rows="5" class="form-control" value="<?= $content->content ?>"><?= $content->content ?></textarea>
+			<label for="agenda" class="col-sm-2 col-form-label">Visi Misi</label>
+			<div class="col-sm-8" id="editor">
+				<textarea name="content" id="content" class="textEditor form-control" rows="10" value="<?= $content->content ?>"><?= $content->content ?></textarea>
 				<?= form_error('content', '<small class="form-text text-danger">', '</small>') ?>
 			</div>
 		</div>

@@ -15,6 +15,7 @@
    <link href="<?= base_url() ?>/asset/landing_assets/css/now-ui-kit.css?v=1.3.0" rel="stylesheet" />
    <link href="<?= base_url() ?>/asset/landing_assets/demo/demo.css" rel="stylesheet" />
    <link rel="stylesheet" href="<?= base_url() ?>/asset/instagram/css/instagram-widget.css">
+   <link rel="stylesheet" href="<?= base_url() ?>/asset/whatsapp/floating-wpp.css">
 
    <title><?= $title ?> - SMK Kesehatan Darussalam Bergas</title>
 </head>
@@ -28,6 +29,10 @@
    <!-- Content -->
    <?php $this->load->view('front/pages/' . $page); ?>
    <!-- End of Content -->
+
+   <!-- Whatsapp Button -->
+   <div id="myButton"></div>
+   <!-- End of Whatsapp Button -->
 
    <!-- Footer -->
    <?php $this->load->view('front/layouts/_footer'); ?>
@@ -50,6 +55,7 @@
    <script src="<?= base_url() ?>/asset/landing_assets/js/now-ui-kit.js?v=1.3.0" type="text/javascript"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
    <script src="<?= base_url() ?>/asset/instagram/js/instagram-widget.js"></script>
+   <script type="text/javascript" src="<?= base_url() ?>/asset/whatsapp/floating-wpp.js"></script>
    <script>
       $(document).ready(function() {
          // the body of this function is in assets/js/now-ui-kit.js
@@ -64,6 +70,21 @@
             }, 1000);
          }
       }
+   </script>
+   <script type="text/javascript">
+      $(function () {
+         $('#myButton').floatingWhatsApp({
+               phone: '+62 812-8590-4290',
+               popupMessage: 'Halo, ada yang bisa kami bantu?',
+               message: "Saya ingin bertanya ...",
+               showPopup: true,
+               showOnIE: false,
+               headerTitle: 'WhatsApp',
+               headerColor: '#1CC98A',
+               backgroundColor: 'whatsapp',
+               buttonImage: '<img src="<?= base_url() ?>/asset/whatsapp/whatsapp.svg" />'
+         });
+      });
    </script>
 </body>
 
