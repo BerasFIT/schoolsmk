@@ -126,7 +126,7 @@
 									<div class="fs-13 mb-2">
 										<i class="fa fa-calendar-alt mr-2" aria-hidden="true"></i><?= mediumdate_indo($b->date) ?>
 									</div>
-									<p class="mb-0"><?= character_limiter($b->content, 50) ?>
+									<p class="mb-0"><?= character_limiter($b->content, 150) ?>
 									</p>
 									<p><a href="<?= base_url("blog/baca/$b->seo_title") ?>"><button class="btn btn-success">Baca Berita<i class="fa fa-angle-right ml-2"></i></button></a></p>
 								</div>

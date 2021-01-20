@@ -30,7 +30,7 @@
 									<div class="fs-13 mb-2">
 										<i class="fa fa-calendar-alt mr-2" aria-hidden="true"></i><?= mediumdate_indo($n->date) ?>
 									</div>
-									<p class="mb-0"><?= character_limiter($n->content, 50) ?>
+									<p class="mb-0"><?= character_limiter($n->content, 150) ?>
 									</p>
 									<p><a href="<?= base_url("blog/baca/$n->seo_title") ?>"><button class="btn btn-success">Lanjutkan Membaca<i class="fa fa-angle-right ml-2"></i></button></a></p>
 								</div>
