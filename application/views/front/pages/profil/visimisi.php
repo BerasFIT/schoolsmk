@@ -1,11 +1,14 @@
-
-<!-- Content -->
-<div class="content mt-5 mb-5 pb-5 pt-5">
+<!-- Visi Misi -->
+<div class="last-news mt-5 mb-5">
 	<div class="container">
-	<h1 class="display-4 my-auto text-center">Visi dan Misi</h1>
-		<div class="row pt-5 pb-5">
+		<div class="row d-flex justify-content-center">
+			<div class="col">
+				<h1 class="text-center mt-5">Visi dan Misi</h1>
+			</div>
+		</div>
+		<div class="col-md-12 mb-4 text-justify">
 			<?= $visimisi->content ?>
 		</div>
 	</div>
 </div>
-<!-- End of Content -->
+<!-- End of Visi Misi -->

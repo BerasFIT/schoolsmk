@@ -59,13 +59,13 @@
 <div class="sambutan mt-5">
 	<div class="container">
 		<div class="row justify-content-center">
-			<div class="col-lg-9 col-md-8 col-sm-12 col-xs-12">
-				<h2>Sambutan Kepala Sekolah</h2>
-				<hr>
-				<p class="text-justify"><?= $sambutan->content ?></p>
-			</div>
 			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-5 text-center">
 				<img src="<?= base_url('img/sambutan/' . $sambutan->photo) ?>" class="img-thumbnail img-fluid rounded-circle">
+			</div>
+			<div class="col-lg-9 col-md-8">
+				<h2 class="title">Sambutan Kepala Sekolah</h2>
+				<hr>
+				<p class="text-justify"><?= $sambutan->content ?></p>
 			</div>
 		</div>
 	</div>
@@ -106,7 +106,7 @@
 	<div class="container">
 		<div class="row d-flex justify-content-center">
 			<div class="col">
-				<h2 class="text-center">Berita Terbaru</h2>
+				<h2 class=" title text-center">Berita Terbaru</h2>
 				<hr>
 			</div>
 		</div>
@@ -116,8 +116,8 @@
 					<div class="card">
 						<img style="height:150px" src="<?= base_url('img/berita/thumbs/' . $b->photo) ?>" class="card-img-top">
 						<div class="card-body">
-							<h6 class="card-title"><?= $b->title ?></h6>
-							<p class="card-text"><?= character_limiter($b->content, 50) ?></p>
+							<h6 class="card-title text-center"><?= $b->title ?></h6>
+							<p class="card-text text-left mt-4 "><?= character_limiter($b->content, 50) ?></p>
 						</div>
 						<div class="card-footer text-center">
 							<a href="<?= base_url("blog/baca/$b->seo_title") ?>"><button class="btn btn-success">Baca Berita<i class="fa fa-angle-right ml-2"></i></button></a>
@@ -166,7 +166,7 @@
 	<div class="container">
 		<div class="row d-flex justify-content-center">
 			<div class="col">
-				<h2 class="text-center">Lokasi</h2>
+				<h2 class="title text-center">Lokasi</h2>
 				<hr>
 			</div>
 		</div>

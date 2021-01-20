@@ -1,12 +1,13 @@
-
 <!-- Content -->
-<div class="content mt-5 mb-5 pb-5 pt-5">
+<div class="last-news mt-5 mb-5">
 	<div class="container">
-	<h1 class="display-4 my-auto text-center">Sejarah</h1>
-		<div class="row pt-5 pb-5">
-			<img src="<?= base_url('img/sejarah/' . $sejarah->photo) ?>" class="img-fluid">
+		<div class="row d-flex justify-content-center">
+			<div class="col">
+				<h1 class="text-center mt-5">Sejarah SMK Kesehatan Darussalam Bergas</h1>
+			</div>
 		</div>
-		<div class="row text-justify">
+		<div class="col-md-12 mb-4 text-justify">
+			<img src="<?= base_url('img/sejarah/' . $sejarah->photo) ?>" class="img-fluid mt-5">
 			<?= $sejarah->content ?>
 		</div>
 	</div>
