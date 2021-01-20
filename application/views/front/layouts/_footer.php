@@ -30,7 +30,7 @@
 		</div>
 	</div>
 	<div class="container">
-		<p class="text-center mt-4">
+		<p class="text-center mt-5">
 			Copyright &copy;<script>
 				document.write(new Date().getFullYear());
 			</script> <i class="fa fa-heart-o" aria-hidden="true"></i> by <a class="text-success" target="_blank">SMK KESEHATAN DARUSSALAM BERGAS</a> All rights reserved.
