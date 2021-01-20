@@ -1,119 +1,83 @@
 <!-- Content -->
-<div class="content mt-5 mb-5 pb-5 pt-5">
+<div class="last-news mt-5 mb-5">
 	<div class="container">
-		<h1 class="display-5 my-auto text-center">Tenaga Kependidikan</h1>
+		<div class="row d-flex justify-content-center">
+			<div class="col">
+				<h1 class="text-center mt-5">Tenaga Kependidikan</h1>
+			</div>
+		</div>
+		<div class="col-md-12 text-left">
 
-		<h4 class="mt-5"><b><?= $kepsek->jabatan ?> SMK Kesehatan Darussalam Bergas</b></h4>
+			<h3 class="mt-5"><b><?= $kepsek->jabatan ?> SMK Kesehatan Darussalam Bergas</b></h3>
+			<div class="row mb-5">
+				<div class="col-md-3 text-md-left">
+					<img src="<?= base_url('img/kepsek/' . $kepsek->photo) ?>" alt="Personal Trainer 2" class="img-responsive">
+				</div>
+				<div class="col-md-8 flex-valign">
+					<h4 class="text-uppercase text-letter-spacing-xs mt-0 mb-1 text-dark font-weight-bold">
+						<?= $kepsek->nama ?>
+					</h4>
+					<h5 class="my-0 font-weight-normal">
+						NIP : <?= $kepsek->nip ?>
+					</h5>
+					<h5 class="my-0 font-weight-normal">
+						Pendidikan : <?= $kepsek->pendidikan ?>
+					</h5>
+					<h5 class="my-0 font-weight-normal">
+						Jabatan : <?= $kepsek->jabatan ?>
+					</h5>
+				</div>
+			</div>
 
-		<table cellpadding="10">
-			<tr>
-				<td><img class="img-responsive" height="150px=" width="150px" src="<?= base_url('img/kepsek/' . $kepsek->photo) ?>"></td>
-				<td>
-					<table>
-						<tr>
-							<td>NIP</td>
-							<td>:</td>
-							<td><?= $kepsek->nip ?></td>
-						</tr>
-						<tr>
-							<td>Nama</td>
-							<td>:</td>
-							<td><?= $kepsek->nama ?></td>
-						</tr>
-						<tr>
-							<td>Pendidikan</td>
-							<td>:</td>
-							<td><?= $kepsek->pendidikan ?></td>
-						</tr>
-						<tr>
-							<td>Jabatan</td>
-							<td>:</td>
-							<td><?= $kepsek->jabatan ?></td>
-						</tr>
-					</table>
-				</td>
-			</tr>
-		</table>
+			<h3 class="mt-5"><b>Guru SMK Kesehatan Darussalam Bergas</b></h3>
 
-
-
-		<h4><b>Guru SMK Kesehatan Darussalam Bergas</b></h4>
-
-		<table cellpadding="10">
 			<?php foreach ($guru as $g) : ?>
-				<tr>
-					<td><img class="img-responsive" height="150px" width="150px" src="<?= base_url('img/guru/' . $g->photo) ?>"></td>
-					<td>
-						<table>
-							<tr>
-								<td>NIP</td>
-								<td>:</td>
-								<td><?= $g->nip ?></td>
-							</tr>
-							<tr>
-								<td>Nama</td>
-								<td>:</td>
-								<td><?= $g->nama ?></td>
-							</tr>
-							<tr>
-								<td>Pendidikan</td>
-								<td>:</td>
-								<td><?= $g->pendidikan ?></td>
-							</tr>
-							<tr>
-								<td>Pelajaran</td>
-								<td>:</td>
-								<td><?= $g->pelajaran ?></td>
-							</tr>
-							<tr>
-								<td>Jabatan</td>
-								<td>:</td>
-								<td><?= $g->jabatan ?></td>
-							</tr>
-						</table>
-					</td>
-				</tr>
+				<div class="row mb-5">
+					<div class="col-md-3 text-md-left">
+						<img src="<?= base_url('img/guru/' . $g->photo) ?>" alt="Personal Trainer 2" class="img-responsive">
+					</div>
+					<div class="col-md-8 flex-valign">
+						<h3 class="text-uppercase text-letter-spacing-xs mt-0 mb-1 text-dark font-weight-bold">
+							<?= $g->nama ?>
+						</h3>
+						<h5 class="my-0 font-weight-normal">
+							NIP : <?= $g->nip ?>
+						</h5>
+						<h5 class="my-0 font-weight-normal">
+							Pendidikan : <?= $g->pendidikan ?>
+						</h5>
+						<h5 class="my-0 font-weight-normal">
+							Jabatan : <?= $g->jabatan ?>
+						</h5>
+					</div>
+				</div>
 			<?php endforeach ?>
-		</table>
 
-		<h4><b>Pegawai SMK Kesehatan Darussalam Bergas</b></h4>
+			<h3 class="mt-5"><b>Pegawai SMK Kesehatan Darussalam Bergas</b></h3>
 
-		<table cellpadding="10">
 			<?php foreach ($pegawai as $p) : ?>
-				<tr>
-					<td><img class="img-responsive" height="150px" width="150px" src="<?= base_url('img/pegawai/' . $p->photo) ?>"></td>
-					<td>
-						<table>
-							<tr>
-								<td>NIP</td>
-								<td>:</td>
-								<td><?= $p->nip ?></td>
-							</tr>
-							<tr>
-								<td>Nama</td>
-								<td>:</td>
-								<td><?= $p->nama ?></td>
-							</tr>
-							<tr>
-								<td>Pendidikan</td>
-								<td>:</td>
-								<td><?= $p->pendidikan ?></td>
-							</tr>
-							<tr>
-								<td>Pelajaran</td>
-								<td>:</td>
-								<td><?= $p->pelajaran ?></td>
-							</tr>
-							<tr>
-								<td>Jabatan</td>
-								<td>:</td>
-								<td><?= $p->jabatan ?></td>
-							</tr>
-						</table>
-					</td>
-				</tr>
+				<div class="row mb-5">
+					<div class="col-md-3 text-md-left">
+
+						<img src="<?= base_url('img/pegawai/' . $p->photo) ?>" alt="Personal Trainer 2" class="img-responsive">
+					</div>
+					<div class="col-md-8 flex-valign">
+						<h3 class="text-uppercase text-letter-spacing-xs mt-0 mb-1 text-dark font-weight-bold">
+							<?= $p->nama ?>
+						</h3>
+						<h5 class="my-0 font-weight-normal">
+							NIP : <?= $p->nip ?>
+						</h5>
+						<h5 class="my-0 font-weight-normal">
+							Pendidikan : <?= $p->pendidikan ?>
+						</h5>
+						<h5 class="my-0 font-weight-normal">
+							Jabatan : <?= $p->jabatan ?>
+						</h5>
+					</div>
+				</div>
 			<?php endforeach ?>
-		</table>
+		</div>
 	</div>
 </div>
 <!-- End of Content -->

@@ -4,10 +4,8 @@
 			<div class="col-sm-4 col-md-5">
 				<h5 class="headin5_amrc col_white_amrc pt2"><b>Hubungi Kami</b></h5>
 				<hr class="bg-success">
-				<!--headin5_amrc-->
-				<p><i class="fa fa-map-marker"></i> JALAN SYEKH PENANGGALAN NO.1 Semarang, Jawa Tengah 50552 </p>
-				<p><i class="fa fa-phone"></i> (024) 6926844 </p>
-				<p><i class="fa fa fa-envelope"></i> smkkesehatandarussalam@yahoo.com</p>
+				<p><i class="fa fa fa-envelope"></i> &nbsp; smkkesehatandarussalam@yahoo.com</p>
+				<p><i class="fa fa-phone"></i> &nbsp; (024) 6926844 </p>
 			</div>
 			<div class="col-sm-4 col-md-4">
 				<h5 class="headin5_amrc col_white_amrc pt2"><b>Tentang Kami</b></h5>

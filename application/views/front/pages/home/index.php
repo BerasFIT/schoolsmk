@@ -56,7 +56,7 @@
 <!-- End of Carousel -->
 
 <!-- Sambutan -->
-<div class="sambutan mt-5">
+<div class="sambutan mt-5 mb-5">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-lg-3 col-md-4 col-sm-6 col-xs-5 text-center">
@@ -105,34 +105,42 @@
 <div class="last-news mt-5 mb-5">
 	<div class="container">
 		<div class="row d-flex justify-content-center">
-			<div class="col">
-				<h2 class=" title text-center">Berita Terbaru</h2>
-				<hr>
-			</div>
-		</div>
-		<div class="row mt-4">
-			<?php foreach ($berita as $b) : ?>
-				<div class="col-md-3 mb-8">
-					<div class="card">
-						<img style="height:150px" src="<?= base_url('img/berita/thumbs/' . $b->photo) ?>" class="card-img-top">
-						<div class="card-body">
-							<h6 class="card-title text-center"><?= $b->title ?></h6>
-							<p class="card-text text-left mt-4 "><?= character_limiter($b->content, 50) ?></p>
-						</div>
-						<div class="card-footer text-center">
-							<a href="<?= base_url("blog/baca/$b->seo_title") ?>"><button class="btn btn-success">Baca Berita<i class="fa fa-angle-right ml-2"></i></button></a>
-						</div>
+			<h2 class=" title text-center">Berita Terbaru</h2>
+			<div class="col-lg-12 stretch-card grid-margin">
+				<div class="card">
+					<div class="card-body">
+						<?php foreach ($berita as $b) : ?>
+							<div class="row mt-5 mb-lg-5">
+
+								<div class="col-sm-4 grid-margin">
+									<div class="position-relative">
+										<div class="rotate-img">
+											<img src="<?= base_url('img/berita/thumbs/' . $b->photo) ?>" width="500px" class="img-fluid" />
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-8  grid-margin">
+									<h3 class="mb-2 font-weight-600">
+										<?= $b->title ?>
+									</h3>
+									<div class="fs-13 mb-2">
+										<i class="fa fa-calendar-alt mr-2" aria-hidden="true"></i><?= mediumdate_indo($b->date) ?>
+									</div>
+									<p class="mb-0"><?= character_limiter($b->content, 50) ?>
+									</p>
+									<p><a href="<?= base_url("blog/baca/$b->seo_title") ?>"><button class="btn btn-success">Baca Berita<i class="fa fa-angle-right ml-2"></i></button></a></p>
+								</div>
+
+							</div>
+							<hr>
+						<?php endforeach ?>
 					</div>
 				</div>
-			<?php endforeach ?>
-		</div>
-		<div class="row mt-4">
-			<div class="col text-center">
-				<a href="<?= base_url('blog') ?>"><button class="btn btn-success">Lihat Selengkapnya<i class="fa fa-angle-right ml-2"></i></button></a>
 			</div>
 		</div>
 	</div>
 </div>
+
 <!-- End of Berita -->
 
 <!-- Sosmed -->

@@ -10,7 +10,7 @@
 			<div class="col-lg-10">
 				<p class="text-right text-muted"><i class="fa fa-calendar-alt mr-2" aria-hidden="true"></i><?= mediumdate_indo($berita->date) ?></p>
 				<div class="text-center">
-				<img src="<?= base_url('img/berita/' . $berita->photo) ?>">
+					<img src="<?= base_url('img/berita/' . $berita->photo) ?>">
 				</div>
 			</div>
 		</div>
