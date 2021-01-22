@@ -137,6 +137,7 @@
 					</div>
 				</div>
 			</div>
+			<a href="<?= base_url('blog') ?>" class="btn btn-success text-light">Lihat Selengkapnya<i class="fa fa-angle-double-right ml-2"></i></a>
 		</div>
 	</div>
 </div>
