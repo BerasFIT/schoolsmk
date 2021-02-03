@@ -80,6 +80,7 @@
 			<div class="row">
 				<div class="col-md-6">
 					<div class="team-player">
+					    <img src="<?= base_url() ?>/img/icon/akplog.png">
 						<h4 class="title">Asisten Keperawatan</h4>
 						<p class="description">Detail penjelasan tentang jurusan asisten keperawatan dapat diakses dengan klik link
 							<a href="<?= base_url('jurusan/ak') ?>">disini</a>.
@@ -150,15 +151,7 @@
 		<h2 class="title">Sosial Media</h2>
 		<div class="team">
 			<div class="row">
-				<div class="col-md-6">
-					<div class="team-player">
-						<h4 class="title">YouTube</h4>
-						<p class="description">Detail penjelasan tentang jurusan asisten keperawatan dapat diakses dengan klik link
-							<a href="<?= base_url('jurusan/ak') ?>">disini</a>.
-						</p>
-					</div>
-				</div>
-				<div class="col-md-6">
+				<div class="col">
 					<div class="team-player">
 						<h4 class="title">Instagram</h4>
 						<div class="instagram__widget" data-user="smkkesehatandarussalam" data-header="yes" data-color="#1CC98A" data-width="75vh"></div>

@@ -39,6 +39,7 @@
                      <tr>
                         <th>#</th>
                         <th>Nama Ekstrakurikuler</th>
+                        <th>Keterangan</th>
                         <th>Foto</th>
                         <th>Aksi</th>
                      </tr>

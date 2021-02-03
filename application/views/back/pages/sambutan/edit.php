@@ -26,7 +26,7 @@
 				<div class="form-group row">
 					<label for="sambutan" class="col-sm-2 col-form-label">Sambutan</label>
 					<div class="col-sm-8">
-						<textarea name="content" id="content" rows="5" class="form-control" value="<?= $content->content ?>"><?= $content->content ?></textarea>
+						<textarea name="content" id="content" rows="5" class="form-control"><?= $content->content ?></textarea>
 						<?= form_error('content', '<small class="form-text text-danger">', '</small>') ?>
 					</div>
 				</div>

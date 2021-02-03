@@ -18,7 +18,7 @@
 				<div class="form-group row">
 					<label for="laborat" class="col-sm-2 col-form-label">Teknologi Laboratorium Medik</label>
 					<div class="col-sm-8">
-						<textarea name="content" id="content" class="textEditor form-control" rows="10" value="<?= $content->content ?>"><?= $content->content ?></textarea>
+						<textarea name="content" id="content" class="textEditor form-control" rows="10"><?= $content->content ?></textarea>
 						<?= form_error('content', '<small class="form-text text-danger">', '</small>') ?>
 					</div>
 				</div>

@@ -24,6 +24,14 @@
 				</div>
 
 				<div class="form-group row">
+					<label for="name" class="col-sm-2 col-form-label">Keterangan</label>
+					<div class="col-sm-8">
+					<textarea name="content" id="content" class="textEditor form-control" rows="10"><?= $input->content ?></textarea>
+						<?= form_error('content', '<small class="form-text text-danger">', '</small>') ?>
+					</div>
+				</div>
+
+				<div class="form-group row">
 					<label class="col-sm-2 col-form-label" id="label-photo">Foto</label>
 					<div class="col-sm-8">
 						<?php if (!empty($input->photo)) : ?>

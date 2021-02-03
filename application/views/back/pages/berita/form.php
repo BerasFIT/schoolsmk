@@ -26,7 +26,7 @@
 				<div class="form-group row">
 					<label for="content" class="col-sm-2 col-form-label">Isi Berita</label>
 					<div class="col-sm-10">
-						<textarea name="content" id="content" class="textEditor form-control" rows="10" value="<?= $input->content ?>"><?= $input->content ?></textarea>
+						<textarea name="content" id="content" class="textEditor form-control" rows="10"><?= $input->content ?></textarea>
 						<!-- <?= form_textarea('content', $input->content, ['row' => 4, 'class' => 'form-control', 'id' => 'summernote']); ?> -->
 						<?= form_error('content', '<small class="form-text text-danger">', '</small>') ?>
 					</div>

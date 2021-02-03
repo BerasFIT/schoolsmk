@@ -4,6 +4,7 @@
 			<div class="col-sm-4 col-md-5">
 				<h5 class="headin5_amrc col_white_amrc pt2"><b>Hubungi Kami</b></h5>
 				<hr class="bg-success">
+				<p><i class="fa fa fa-envelope"></i> &nbsp; info@smkkesdabergas.sch.id</p>
 				<p><i class="fa fa fa-envelope"></i> &nbsp; smkkesehatandarussalam@yahoo.com</p>
 				<p><i class="fa fa-phone"></i> &nbsp; (024) 6926844 </p>
 			</div>

@@ -24,7 +24,7 @@
          <div class="card-body">
             <div class="row mt-2">
                <div class="col">
-                  <a href="<?= base_url('pegawai/add') ?>" class="btn btn-success btn-sm">
+                  <a href="<?= base_url('guru/add') ?>" class="btn btn-success btn-sm">
                      <i class="fas fa-plus"></i> Tambah
                   </a>
 

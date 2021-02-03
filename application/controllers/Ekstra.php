@@ -6,8 +6,8 @@ class Ekstra extends CI_Controller {
 	var $table = 'ekstra';
 	var $id = 'id';
 	var $select = ['*'];
-	var $column_order = ['', 'name', 'photo'];
-	var $column_search = ['name', 'photo'];
+	var $column_order = ['', 'name', 'content', 'photo'];
+	var $column_search = ['name', 'content', 'photo'];
 	
 	public function __construct()
 	{
@@ -36,6 +36,7 @@ class Ekstra extends CI_Controller {
 			$row = [];
 			$row[] = $no++;
 			$row[] = $li->name;
+			$row[] = $li->content;
 
 			if($li->photo){
             $row[] = '<a href="' . base_url('img/ekstra/' . $li->photo).'" target="_blank"><img src="'.base_url('img/ekstra/' . $li->photo) . '" class="img-responsive" style="max-height:150px; max-width:400px;"/></a>';
@@ -87,6 +88,7 @@ class Ekstra extends CI_Controller {
 			
 			$data = [
 				'name' => $this->input->post('name', true),
+				'content' => $this->input->post('content', true),
 			];
 
 			if(!empty($_FILES['photo']['name'])){
@@ -125,6 +127,7 @@ class Ekstra extends CI_Controller {
 		}else{
 			$data = [
 				'name' => $this->input->post('name', true),
+				'content' => $this->input->post('content', true),
 			];
 
 			if(!empty($_FILES['photo']['name'])){

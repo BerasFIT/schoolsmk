@@ -26,7 +26,7 @@
 				<div class="form-group row">
 					<label for="title" class="col-sm-2 col-form-label">Teks</label>
 					<div class="col-sm-8">
-						<textarea name="text" id="text" rows="5" class="form-control" value="<?= $input->text ?>"><?= $input->text ?></textarea>
+						<textarea name="text" id="text" rows="5" class="form-control"><?= $input->text ?></textarea>
 						<?= form_error('text', '<small class="form-text text-danger">', '</small>') ?>
 					</div>
 				</div>

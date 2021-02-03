@@ -31,7 +31,7 @@
 				<div class="form-group row">
 					<label for="jadwal" class="col-sm-2 col-form-label">Agenda</label>
 					<div class="col-sm-8" id="editor">
-						<textarea name="content" id="content" class="textEditor form-control" rows="10" value="<?= $content->content ?>"><?= $content->content ?></textarea>
+						<textarea name="content" id="content" class="textEditor form-control" rows="10"><?= $content->content ?></textarea>
 						<?= form_error('content', '<small class="form-text text-danger">', '</small>') ?>
 					</div>
 				</div>
@@ -40,7 +40,7 @@
 					<label class="col-sm-2 col-form-label" id="label-photo">Foto</label>
 					<div class="col-sm-8">
 						<?php if (!empty($content->photo)) : ?>
-							<img src="<?= base_url("img/tatatertib/$content->photo") ?>" alt="" height="150">
+							<img src="<?= base_url("img/jadwal/$content->photo") ?>" alt="" height="150">
 						<?php else : ?>
 							<p>No Photo</p>
 						<?php endif; ?>

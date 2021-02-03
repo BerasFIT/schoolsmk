@@ -20,6 +20,11 @@
 							</div>
 							<div class="modal-body">
 								<img src="<?= base_url('img/fasilitas/' . $f->photo) ?>" class="text-center" height="100%" width="100%" data-toggle="modal" data-target="#<?= $f->unik ?>">
+								<hr>
+								<h5>Keterangan</h5>
+								<div class="text-justify">
+								<p><?= $f->content ?></p>
+								</div>
 							</div>
 							<div class="modal-footer">
 								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

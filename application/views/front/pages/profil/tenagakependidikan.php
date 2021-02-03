@@ -18,9 +18,6 @@
 						<?= $kepsek->nama ?>
 					</h4>
 					<h5 class="my-0 font-weight-normal">
-						NIP : <?= $kepsek->nip ?>
-					</h5>
-					<h5 class="my-0 font-weight-normal">
 						Pendidikan : <?= $kepsek->pendidikan ?>
 					</h5>
 					<h5 class="my-0 font-weight-normal">
@@ -37,14 +34,14 @@
 						<img src="<?= base_url('img/guru/' . $g->photo) ?>" alt="Personal Trainer 2" class="img-responsive">
 					</div>
 					<div class="col-md-8 flex-valign">
-						<h3 class="text-uppercase text-letter-spacing-xs mt-0 mb-1 text-dark font-weight-bold">
+						<h4 class="text-uppercase text-letter-spacing-xs mt-0 mb-1 text-dark font-weight-bold">
 							<?= $g->nama ?>
-						</h3>
-						<h5 class="my-0 font-weight-normal">
-							NIP : <?= $g->nip ?>
-						</h5>
+						</h4>
 						<h5 class="my-0 font-weight-normal">
 							Pendidikan : <?= $g->pendidikan ?>
+						</h5>
+						<h5 class="my-0 font-weight-normal">
+							Pelajaran : <?= $g->pelajaran ?>
 						</h5>
 						<h5 class="my-0 font-weight-normal">
 							Jabatan : <?= $g->jabatan ?>
@@ -62,14 +59,14 @@
 						<img src="<?= base_url('img/pegawai/' . $p->photo) ?>" alt="Personal Trainer 2" class="img-responsive">
 					</div>
 					<div class="col-md-8 flex-valign">
-						<h3 class="text-uppercase text-letter-spacing-xs mt-0 mb-1 text-dark font-weight-bold">
+						<h4 class="text-uppercase text-letter-spacing-xs mt-0 mb-1 text-dark font-weight-bold">
 							<?= $p->nama ?>
-						</h3>
-						<h5 class="my-0 font-weight-normal">
-							NIP : <?= $p->nip ?>
-						</h5>
+						</h4>
 						<h5 class="my-0 font-weight-normal">
 							Pendidikan : <?= $p->pendidikan ?>
+						</h5>
+						<h5 class="my-0 font-weight-normal">
+							Pelajaran : <?= $p->pelajaran ?>
 						</h5>
 						<h5 class="my-0 font-weight-normal">
 							Jabatan : <?= $p->jabatan ?>

@@ -15,7 +15,7 @@ class Ekstra_model extends CI_Model {
 
 	public function getAllEkstraUnik()
 	{
-		return $this->db->query("select id,name,photo, replace(name , ' ','') unik from ekstra")->result();
+		return $this->db->query("select id, name, content, photo, replace(name , ' ','') unik from ekstra")->result();
 	}
 
 	public function insert($data)
@@ -38,7 +38,8 @@ class Ekstra_model extends CI_Model {
 	public function getDefaultValues()
    {
       return [
-         'name'        	=> '',
+		 'name'        	=> '',
+		 'content'      => '',
          'photo'        => '',
       ];
 	}

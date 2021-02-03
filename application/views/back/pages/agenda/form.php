@@ -11,7 +11,7 @@
 		<div class="form-group row">
 			<label for="agenda" class="col-sm-2 col-form-label">Agenda</label>
 			<div class="col-sm-8" id="editor">
-				<textarea name="content" id="content" class="textEditor form-control" rows="10" value="<?= $content->content ?>"><?= $content->content ?></textarea>
+				<textarea name="content" id="content" class="textEditor form-control" rows="10"><?= $content->content ?></textarea>
 				<?= form_error('content', '<small class="form-text text-danger">', '</small>') ?>
 			</div>
 		</div>

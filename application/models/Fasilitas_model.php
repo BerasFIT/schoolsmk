@@ -15,7 +15,7 @@ class Fasilitas_model extends CI_Model {
 
 	public function getAllFasilityUnik()
 	{
-		return $this->db->query("select id,name,photo, replace(name , ' ','') unik from facilities")->result();
+		return $this->db->query("select id, name, content, photo, replace(name , ' ','') unik from facilities")->result();
 	}
 
 	public function insert($data)
@@ -38,7 +38,8 @@ class Fasilitas_model extends CI_Model {
 	public function getDefaultValues()
    {
       return [
-         'name'        	=> '',
+		 'name'        	=> '',
+		 'content'      => '',
          'photo'        => '',
       ];
 	}
